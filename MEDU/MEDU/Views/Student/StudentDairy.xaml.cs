@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+
+using Xamarin.Forms;
+using System.Collections.ObjectModel;
+
+namespace MEDU
+{
+    public partial class StudentDairy : ContentPage
+    {
+        ObservableCollection<Dairy> obcDairyData;
+        public StudentDairy()
+        {
+            InitializeComponent();
+            obcDairyData = new ObservableCollection<Dairy>()
+            {
+                new Dairy{Dates="01/01/2017"},
+                new Dairy{Dates="02/01/2017"},
+                new Dairy{Dates="03/01/2017"},
+                new Dairy{Dates="04/01/2017"},
+                new Dairy{Dates="05/01/2017"},
+                new Dairy{Dates="06/01/2017"},
+                new Dairy{Dates="08/01/2017"},
+                new Dairy{Dates="09/01/2017"},
+                new Dairy{Dates="10/01/2017"},
+                new Dairy{Dates="11/01/2017"}
+            };
+            lvDairyListDisplay.ItemsSource = obcDairyData;
+            gridHeader.BackgroundColor = AppGlobalVariables.orange;
+            lvDairyListDisplay.ItemSelected += SelectedDairyDate;
+        }
+
+        void MainNavigationClicked(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
+            //Navigatic(new );
+        }
+
+        void SelectedDairyDate(object sender, SelectedItemChangedEventArgs e)
+        {
+            try
+            {
+                var dairyDate = ((ListView)sender).SelectedItem as Dairy;
+                if(dairyDate == null)
+                {
+                    return;
+                }
+                Navigation.PushModalAsync(new StudentDairyDetail(dairyDate));
+            }
+            catch(Exception ex)
+            {
+                var msg = ex.Message;
+            }
+        }
+    }
+
+    public class Dairy
+    {
+        public string Dates { get; set; }
+    }
+}

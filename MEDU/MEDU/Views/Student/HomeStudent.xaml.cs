@@ -23,7 +23,7 @@ namespace MEDU
         }
         void DairyNavigationClicked(object sender, EventArgs e)
         {
-            //Navigation.PushModnew );
+            Navigation.PushModalAsync(new StudentDairy());
         }
         void ExamsNavigationClicked(object sender, EventArgs e)
         {
