@@ -10,8 +10,13 @@ namespace MEDU
         public HomeStudent()
         {
             InitializeComponent();
+            gridHeader.BackgroundColor = AppGlobalVariables.orange;
         }
 
+        void MainNavigationClicked(object sender, EventArgs e)
+        {
+            //Navigation.PushMc(new );
+        }
         void ProfileNavigationClicked(object sender, EventArgs e)
         {
             //Navigation.PushModalAsync(new );
