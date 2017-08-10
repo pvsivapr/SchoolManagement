@@ -35,31 +35,31 @@ namespace MEDU
         }
         void ProfileNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentProfile());
+            Navigation.PushModalAsync(new StudentProfile("imgHomeIcon.png"));
         }
         void DairyNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentDairy());
+            Navigation.PushModalAsync(new StudentDairy("imgHomeIcon.png"));
         }
         void ExamsNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentExams());
+            Navigation.PushModalAsync(new StudentExams("imgHomeIcon.png"));
         }
         void EventsNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentEvents());
+            Navigation.PushModalAsync(new StudentEvents("imgHomeIcon.png"));
         }
         void HolidaysNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentHolidays());
+            Navigation.PushModalAsync(new StudentHolidays("imgHomeIcon.png"));
         }
         void FeesNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentCourseFee());
+            Navigation.PushModalAsync(new StudentCourseFee("imgHomeIcon.png"));
         }
         void AboutUsNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Aboutus());
+            Navigation.PushModalAsync(new Aboutus("imgHomeIcon.png"));
         }
 
     }

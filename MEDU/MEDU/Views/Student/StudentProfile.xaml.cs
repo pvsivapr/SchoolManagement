@@ -7,14 +7,33 @@ namespace MEDU
 {
     public partial class StudentProfile : ContentPage
     {
-        public StudentProfile()
+
+        bool isFromHome;
+        public StudentProfile(string imgHead)
         {
+            if (imgHead == "imgHomeIcon.png")
+            {
+                isFromHome = true;
+            }
+            else
+            {
+                isFromHome = false;
+            }
             InitializeComponent();
+            imgHeader.Source = ImageSource.FromFile(imgHead);
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
         }
         void MainNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
+            if (isFromHome == true)
+            {
+                Navigation.PopModalAsync();
+            }
+            else
+            {
+                var ParentPage = (MasterDetailPage)this.Parent;
+                ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+            }
         }
     }
 }

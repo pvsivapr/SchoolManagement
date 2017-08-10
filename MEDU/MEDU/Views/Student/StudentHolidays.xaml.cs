@@ -8,9 +8,19 @@ namespace MEDU
     public partial class StudentHolidays : ContentPage
     {
         ObservableCollection<Holidays> obcHolidaysData;
-        public StudentHolidays()
+        bool isFromHome;
+        public StudentHolidays(string imgHead)
         {
+            if (imgHead == "imgHomeIcon.png")
+            {
+                isFromHome = true;
+            }
+            else
+            {
+                isFromHome = false;
+            }
             InitializeComponent();
+            imgHeader.Source = ImageSource.FromFile(imgHead);
             obcHolidaysData = new ObservableCollection<Holidays>()
             {
                 new Holidays{HolidayNames="Sankranthi", HolidayDates="01/01/2017", HolidayStatus="Completed", HolidayRemarks=""},
@@ -29,7 +39,15 @@ namespace MEDU
 
         void MainNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
+            if (isFromHome == true)
+            {
+                Navigation.PopModalAsync();
+            }
+            else
+            {
+                var ParentPage = (MasterDetailPage)this.Parent;
+                ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+            }
         }
 
         void SelectedHolidayData(object sender, SelectedItemChangedEventArgs e)

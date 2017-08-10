@@ -9,9 +9,19 @@ namespace MEDU
     public partial class StudentCourseFee : ContentPage
     {
         ObservableCollection<CourseFee> obcFeeData;
-        public StudentCourseFee()
+        bool isFromHome;
+        public StudentCourseFee(string imgHead)
         {
+            if (imgHead == "imgHomeIcon.png")
+            {
+                isFromHome = true;
+            }
+            else
+            {
+                isFromHome = false;
+            }
             InitializeComponent();
+            imgHeader.Source = ImageSource.FromFile(imgHead);
             obcFeeData = new ObservableCollection<CourseFee>()
             {
                 new CourseFee{FeeTitle="Term 1", FeeDates="31/07/2017", FeeStatus="Paid", FeeRemarks=" "},
@@ -24,7 +34,31 @@ namespace MEDU
         }
         void MainNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
+            try
+            {
+                //if (((Image)sender).Source == ImageSource.FromFile("imgHomeIcon.png"))
+                //{
+                //    Navigation.PopModalAsync();
+                //}
+                //else
+                //{
+                //    var ParentPage = (MasterDetailPage)this.Parent;
+                //    ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+                //}
+                if (isFromHome == true)
+                {
+                    Navigation.PopModalAsync();
+                }
+                else
+                {
+                    var ParentPage = (MasterDetailPage)this.Parent;
+                    ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+                }
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+            }
         }
 
         void SelectedFeeData(object sender, SelectedItemChangedEventArgs e)

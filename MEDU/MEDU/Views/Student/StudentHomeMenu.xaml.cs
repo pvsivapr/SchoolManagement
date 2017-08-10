@@ -24,7 +24,7 @@ namespace MEDU
 
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "MY PROFILE",
+                Title = "PROFILE",
                 IconSource = "imgHamburger.png",
                 TargetType = typeof(HomeStudent)
             });
@@ -86,31 +86,31 @@ namespace MEDU
                 }
                 else if (examData.Title == "PROFILE")
                 {
-                    parentDetailView.Detail = new StudentProfile() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentProfile("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY DAIRY")
                 {
-                    parentDetailView.Detail = new StudentDairy() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentDairy("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY EXAMS")
                 {
-                    parentDetailView.Detail = new StudentExams() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentExams("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY EVENTS")
                 {
-                    parentDetailView.Detail = new StudentEvents() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentEvents("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY HOLIDAYS")
                 {
-                    parentDetailView.Detail = new StudentHolidays() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentHolidays("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "FEES")
                 {
-                    parentDetailView.Detail = new StudentCourseFee() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentCourseFee("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "ABOUT US")
                 {
-                    parentDetailView.Detail = new Aboutus() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new Aboutus("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
                 else
                 {

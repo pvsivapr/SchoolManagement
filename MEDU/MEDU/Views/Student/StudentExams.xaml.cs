@@ -8,6 +8,7 @@ namespace MEDU
     public partial class StudentExams : ContentPage
     {
         ObservableCollection<Exams> obcExamsData;
+        bool isFromHome;
 
         protected override void OnAppearing()
         {
@@ -15,9 +16,18 @@ namespace MEDU
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        public StudentExams()
+        public StudentExams(string imgHead)
         {
+            if (imgHead == "imgHomeIcon.png")
+            {
+                isFromHome = true;
+            }
+            else
+            {
+                isFromHome = false;
+            }
             InitializeComponent();
+            imgHeader.Source = ImageSource.FromFile(imgHead);
             obcExamsData = new ObservableCollection<Exams>()
             {
                 new Exams{ExamNames="Unit 1", ExamDates="31/07/2017", ExamStatus="Completed", ExamResults="First Language:\n\t\t \nSecond Language:\n\t\t \nThird Language:\n\t\t \nMathematics:\n\t\t \nGeneral Sciences:\n\t\t \nSocial Studies:\n\t\t "},
@@ -35,7 +45,15 @@ namespace MEDU
 
         void MainNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
+            if (isFromHome == true)
+            {
+                Navigation.PopModalAsync();
+            }
+            else
+            {
+                var ParentPage = (MasterDetailPage)this.Parent;
+                ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+            }
         }
 
         void SelectedExamData(object sender, SelectedItemChangedEventArgs e)

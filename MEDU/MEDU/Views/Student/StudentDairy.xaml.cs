@@ -9,9 +9,20 @@ namespace MEDU
     public partial class StudentDairy : ContentPage
     {
         ObservableCollection<Dairy> obcDairyData;
-        public StudentDairy()
+        bool
+        isFromHome;
+        public StudentDairy(string imgHead)
         {
+            if (imgHead == "imgHomeIcon.png")
+            {
+                isFromHome = true;
+            }
+            else
+            {
+                isFromHome = false;
+            }
             InitializeComponent();
+            imgHeader.Source = ImageSource.FromFile(imgHead);
             obcDairyData = new ObservableCollection<Dairy>()
             {
                 new Dairy{Dates="01/01/2017", Status="Completed", SubjectData="First Language:\n\t\t \nSecond Language:\n\t\t \nThird Language:\n\t\t \nMathematics:\n\t\t \nGeneral Sciences:\n\t\t \nSocial Studies:\n\t\t "},
@@ -32,8 +43,15 @@ namespace MEDU
 
         void MainNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
-            //Navigatic(new );
+            if (isFromHome == true)
+            {
+                Navigation.PopModalAsync();
+            }
+            else
+            {
+                var ParentPage = (MasterDetailPage)this.Parent;
+                ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+            }
         }
 
         void SelectedDairyDate(object sender, SelectedItemChangedEventArgs e)
