@@ -10,7 +10,8 @@ namespace MEDU
         ObservableCollection<Exams> obcExamsData;
         public StudentExams()
         {
-            InitializeComponent(); obcExamsData = new ObservableCollection<Exams>()
+            InitializeComponent();
+            obcExamsData = new ObservableCollection<Exams>()
             {
                 new Exams{ExamNames="Unit 1", ExamDates="31/07/2017", ExamStatus="Completed", ExamResults="First Language:\n\t\t \nSecond Language:\n\t\t \nThird Language:\n\t\t \nMathematics:\n\t\t \nGeneral Sciences:\n\t\t \nSocial Studies:\n\t\t "},
                 new Exams{ExamNames="Unit 2", ExamDates="11/09/2017", ExamStatus="Sheduled", ExamResults="First Language:\n\t\t \nSecond Language:\n\t\t \nThird Language:\n\t\t \nMathematics:\n\t\t \nGeneral Sciences:\n\t\t \nSocial Studies:\n\t\t "},
@@ -40,6 +41,7 @@ namespace MEDU
                     return;
                 }
                 Navigation.PushModalAsync(new StudentExamsDetail(examData));
+                ((ListView)sender).SelectedItem = null;
             }
             catch (Exception ex)
             {

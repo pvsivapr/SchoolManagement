@@ -46,6 +46,7 @@ namespace MEDU
                     return;
                 }
                 Navigation.PushModalAsync(new StudentDairyDetail(dairyDate));
+                ((ListView)sender).SelectedItem = null;
             }
             catch (Exception ex)
             {

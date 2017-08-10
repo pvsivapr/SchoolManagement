@@ -35,7 +35,7 @@ namespace MEDU
         }
         void HolidaysNavigationClicked(object sender, EventArgs e)
         {
-            //Navigation.PushModnew );
+            Navigation.PushModalAsync(new StudentHolidays());
         }
         void FeesNavigationClicked(object sender, EventArgs e)
         {
