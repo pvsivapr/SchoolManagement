@@ -27,7 +27,7 @@ namespace MEDU
         }
         void ExamsNavigationClicked(object sender, EventArgs e)
         {
-            //Navigation.PushModnew );
+            Navigation.PushModalAsync(new StudentExams());
         }
         void EventsNavigationClicked(object sender, EventArgs e)
         {

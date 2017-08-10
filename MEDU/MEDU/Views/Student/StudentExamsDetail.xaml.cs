@@ -5,13 +5,15 @@ using Xamarin.Forms;
 
 namespace MEDU
 {
-    public partial class StudentDairyDetail : ContentPage
+    public partial class StudentExamsDetail : ContentPage
     {
-        public StudentDairyDetail(Dairy selectedDairyDate)
+        public StudentExamsDetail(Exams selectedExamData)
         {
             InitializeComponent();
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
-            lblData.Text = selectedDairyDate.SubjectData;
+            lblNameData.Text = selectedExamData.ExamNames;
+            lblDateData.Text = selectedExamData.ExamDates;
+            lblResultData.Text = selectedExamData.ExamResults;
         }
 
         void MainNavigationClicked(object sender, EventArgs e)
