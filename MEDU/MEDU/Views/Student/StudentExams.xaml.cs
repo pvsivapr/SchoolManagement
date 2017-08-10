@@ -8,6 +8,13 @@ namespace MEDU
     public partial class StudentExams : ContentPage
     {
         ObservableCollection<Exams> obcExamsData;
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
         public StudentExams()
         {
             InitializeComponent();

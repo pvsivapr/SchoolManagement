@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    MasterBehavior="Popover" 
+    xmlns:local="clr-namespace:MEDU; assembly=MEDU" 
+	x:Class="MEDU.StudentHomeMaster">
+    <MasterDetailPage.Master>
+        <local:StudentHomeMenu x:Name="masterpage" BackgroundColor="Aqua"/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:HomeStudent/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

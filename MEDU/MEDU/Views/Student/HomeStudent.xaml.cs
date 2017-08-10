@@ -7,15 +7,31 @@ namespace MEDU
 {
     public partial class HomeStudent : ContentPage
     {
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
         public HomeStudent()
         {
             InitializeComponent();
+            Title = "";
+            //Icon = null;
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
         }
 
         void MainNavigationClicked(object sender, EventArgs e)
         {
-            //Navigation.PushMc(new );
+            try
+            {
+                var ParentPage = (MasterDetailPage)this.Parent;
+                ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+            }
         }
         void ProfileNavigationClicked(object sender, EventArgs e)
         {
