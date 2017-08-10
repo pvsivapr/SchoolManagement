@@ -31,7 +31,7 @@ namespace MEDU
         }
         void EventsNavigationClicked(object sender, EventArgs e)
         {
-            //Navigation.PushModnew );
+            Navigation.PushModalAsync(new StudentEvents());
         }
         void HolidaysNavigationClicked(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace MEDU
         }
         void FeesNavigationClicked(object sender, EventArgs e)
         {
-            //Navigationnew );
+            Navigation.PushModalAsync(new StudentCourseFee());
         }
         void AboutUsNavigationClicked(object sender, EventArgs e)
         {
