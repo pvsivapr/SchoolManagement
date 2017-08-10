@@ -19,7 +19,7 @@ namespace MEDU
         }
         void ProfileNavigationClicked(object sender, EventArgs e)
         {
-            //Navigation.PushModalAsync(new );
+            Navigation.PushModalAsync(new StudentProfile());
         }
         void DairyNavigationClicked(object sender, EventArgs e)
         {
@@ -43,7 +43,7 @@ namespace MEDU
         }
         void AboutUsNavigationClicked(object sender, EventArgs e)
         {
-            //Navigationnew );
+            Navigation.PushModalAsync(new Aboutus());
         }
 
     }

@@ -2,8 +2,8 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="MEDU.StudentDairy">
-
+	x:Class="MEDU.StudentProfile">
+	
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0,20,0,0" />
@@ -28,32 +28,25 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MainNavigationClicked" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Label x:Name="pageTitle" Text="School Dairy" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label x:Name="pageTitle" Text="Student Profile" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
                 <Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
                 </Button>
                 
             </Grid>
 
-            <StackLayout x:Name="stackBody" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-				<ListView x:Name="lvDairyListDisplay" HasUnevenRows="true" RowHeight="100" SeparatorVisibility="Default" >
-					<ListView.ItemTemplate>
-						<DataTemplate>
-							<ViewCell>
-								<StackLayout Padding="30,0,0,0">
-									<Label Text="{Binding Dates}" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
-									</Label>
-									<StackLayout Orientation="Horizontal" Padding="0,0,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                                        <Label Text="{Binding Status}" TextColor="Black" FontSize="15" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
-                                        </Label>
-                                        <!--<Label Text="{Binding ExamStatus}" TextColor="Black" FontSize="15" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                                        </Label>-->
-                                    </StackLayout>
-								</StackLayout>
-							</ViewCell>
-						</DataTemplate>
-					</ListView.ItemTemplate>
-				</ListView>
+            <StackLayout x:Name="stackBody" Padding="20,0,0,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ScrollView>
+                    <StackLayout Spacing="30">
+                        <Label x:Name="lblNameData" FontSize="17" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        </Label>
+                        <Label x:Name="lblDateData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        </Label>
+                        <Label x:Name="lblResultData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        </Label>
+                    </StackLayout>
+                </ScrollView>
+
 
                 <!--<StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End">
                     <Label Text="Have an account already?" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
