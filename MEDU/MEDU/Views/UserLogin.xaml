@@ -1,8 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MEDU.UserLogin">
-	<ContentPage.Content>
-		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-			<Label Text="Raju" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
-		</StackLayout>
-	</ContentPage.Content>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MEDU;assembly=MEDU"
+	x:Class="MEDU.UserLogin">
+	
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+            <On Platform="Android, WinPhone, Windows" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <!--<Grid x:Name="gridHeader" BackgroundColor="Maroon" Padding="10,0,0,0" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgHeader" Source="imgHomeIcon.png" Margin="10,0,30,0" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MainNavigationClicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label x:Name="pageTitle" Text="Login" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                </Label>
+                <Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                </Button>
+                
+            </Grid>-->
+
+            <StackLayout x:Name="stackBody" Padding="20,0,20,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,0,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+				<Image Source="School.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+				</Image>
+				<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+					<StackLayout>
+						<Label Text="User Name" FontSize="10" HorizontalOptions="Start" VerticalOptions="Start">
+						</Label>
+						<local:CustomEntry Placeholder="User Name" HorizontalOptions="FillAndExpand">
+						</local:CustomEntry>
+						<BoxView HeightRequest="1" BackgroundColor="Black" WidthRequest="250" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+						</BoxView>
+					</StackLayout>
+					<StackLayout>
+                        <Label Text="Password" FontSize="10" HorizontalOptions="Start" VerticalOptions="Start">
+                        </Label>
+                        <local:CustomEntry Placeholder="Password" HorizontalOptions="FillAndExpand">
+                        </local:CustomEntry>
+                        <BoxView HeightRequest="1" BackgroundColor="Black" WidthRequest="250" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                        </BoxView>
+                    </StackLayout>
+					<StackLayout>
+                        <Label Text="User Name" FontSize="10" HorizontalOptions="Start" VerticalOptions="Start">
+                        </Label>
+                        <local:CustomPicker Title="User Name" HorizontalOptions="FillAndExpand">
+                        </local:CustomPicker>
+                        <BoxView HeightRequest="1" BackgroundColor="Black" WidthRequest="250" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                        </BoxView>
+                    </StackLayout>
+					<Button Text="Login" HorizontalOptions="FillAndExpand">
+					</Button>
+				</StackLayout>
+                
+            </StackLayout>
+
+			<StackLayout x:Name="stackFooter" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1,1,1,0.1" AbsoluteLayout.LayoutFlags="All" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                <Label Text="Powered by" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                </Label>
+				<Label Text="Sivaprasad" TextColor="Teal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                </Label>
+			</StackLayout>
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>

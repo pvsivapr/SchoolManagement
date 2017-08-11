@@ -9,8 +9,7 @@ namespace MEDU
     public partial class StudentDairy : ContentPage
     {
         ObservableCollection<Dairy> obcDairyData;
-        bool
-        isFromHome;
+        bool isFromHome;
         public StudentDairy(string imgHead)
         {
             if (imgHead == "imgHomeIcon.png")

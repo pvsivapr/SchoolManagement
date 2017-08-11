@@ -36,16 +36,30 @@
             </Grid>
 
             <StackLayout x:Name="stackBody" Padding="20,0,0,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <ScrollView>
-                    <StackLayout Spacing="30">
-                        <Label x:Name="lblNameData" FontSize="17" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                        </Label>
-                        <Label x:Name="lblDateData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                        </Label>
-                        <Label x:Name="lblResultData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                        </Label>
+                
+                    <StackLayout Spacing="30" Padding="0,10,0,0">
+						<Image x:Name="imgProfilePic" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+						</Image>
+					<ScrollView>
+						<StackLayout Spacing="20">
+
+							<Label x:Name="lblNameData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+							</Label>
+							<Label x:Name="lblRollNoData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+							</Label>
+							<Label x:Name="lblClassData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+							</Label>
+							<Label x:Name="lblMobileData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            </Label>
+							<Label x:Name="lblEmailData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            </Label>
+							<Label x:Name="lblAddressData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            </Label>
+							
+						</StackLayout>
+						</ScrollView>
                     </StackLayout>
-                </ScrollView>
+                
 
 
                 <!--<StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End">
