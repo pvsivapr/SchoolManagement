@@ -30,8 +30,8 @@
                 </Image>
                 <Label x:Name="pageTitle" Text="Today's Work" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
-                <Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
-                </Button>
+                <!--<Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                </Button>-->
                 
             </Grid>
 

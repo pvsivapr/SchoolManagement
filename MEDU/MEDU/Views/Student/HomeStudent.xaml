@@ -3,13 +3,34 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	x:Class="MEDU.HomeStudent">
-
+    
+	<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="styleImgHome" TargetType="Label">
+                <Setter Property="HeightRequest" Value="95" />
+				<Setter Property="WidthRequest" Value="95" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+            <Style x:Key="styleLblHome" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+				<Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+			<Style x:Key="styleStackHome" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+	
 	<ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0,20,0,0" />
             <On Platform="Android, WinPhone, Windows" Value="0,0,0,0" />
         </OnPlatform>
     </ContentPage.Padding>
+	
     <ContentPage.Content>
         <AbsoluteLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
@@ -50,67 +71,67 @@
 					</Grid.ColumnDefinitions>
                     <!--<Frame BackgroundColor="#F78F1E" HasShadow="false" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     </Frame>-->
-					<StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-						<Image Source="UserProfile.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="0" Grid.Row="0" Style="{StaticResource styleStackHome}">
+						<Image Source="UserProfile.png" Style="{StaticResource styleImgHome}">
 							<Image.GestureRecognizers>
 								<TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ProfileNavigationClicked" />
 							</Image.GestureRecognizers>
 						</Image>
-						<Label Text="Child Profile" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+						<Label Text="Child Profile" Style="{StaticResource styleLblHome}" >
 						</Label>
 					</StackLayout>
-					<StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Image Source="Dairy.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="1" Grid.Row="0" Style="{StaticResource styleStackHome}">
+                        <Image Source="Dairy.png" Style="{StaticResource styleImgHome}">
 							<Image.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="DairyNavigationClicked" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Text="Dairy" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="Dairy" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-					<StackLayout Grid.Column="2" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Image Source="Exams.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="2" Grid.Row="0" Style="{StaticResource styleStackHome}">
+                        <Image Source="Exams.png" Style="{StaticResource styleImgHome}">
 							<Image.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ExamsNavigationClicked" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Text="Exams" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="Exams" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-					<StackLayout Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Image Source="Events.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="0" Grid.Row="1" Style="{StaticResource styleStackHome}">
+                        <Image Source="Events.png" Style="{StaticResource styleImgHome}">
 							<Image.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="EventsNavigationClicked" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Text="Events" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="Events" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-					<StackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Image Source="Holidays.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="1" Grid.Row="1" Style="{StaticResource styleStackHome}">
+                        <Image Source="Holidays.png" Style="{StaticResource styleImgHome}">
 							<Image.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="HolidaysNavigationClicked" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Text="Holidays" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="Holidays" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-					<StackLayout Grid.Column="2" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Image Source="Fees.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="2" Grid.Row="1" Style="{StaticResource styleStackHome}">
+                        <Image Source="Fees.png" Style="{StaticResource styleImgHome}">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FeesNavigationClicked" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Text="Fees" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="Fees" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-					<StackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <Image Source="AboutUs.png" HeightRequest="120" WidthRequest="120" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<StackLayout Grid.Column="0" Grid.Row="2" Style="{StaticResource styleStackHome}">
+                        <Image Source="AboutUs.png" Style="{StaticResource styleImgHome}">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="AboutUsNavigationClicked" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label Text="About us" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="About us" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 
