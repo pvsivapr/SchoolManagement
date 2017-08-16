@@ -28,6 +28,8 @@ namespace MEDU
             //stackUName.HeightRequest = (App.screenHeight * 8) / 100;
             entryUPassword.Focused += uPasswordFocused;
             entryUPassword.Unfocused += uPasswordUnFocused;
+            entryUPassword.IsCustomPassword = true;
+            entryUPassword.IsPassword = true;
             //stackUPassword.HeightRequest = (App.screenHeight * 8) / 100;
             pickerUType.Focused += TypeFocused;
             pickerUType.Unfocused += TypeUnFocused;
