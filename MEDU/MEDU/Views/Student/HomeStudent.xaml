@@ -49,16 +49,21 @@
 						<TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MainNavigationClicked" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Label x:Name="pageTitle" Text="Sai Teja Vidya Nikethan" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label x:Name="pageTitle" Text="Oxford Public School" FontAttributes="Bold" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
-                <Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
-                </Button>
+				<Image Source="power.png" Margin="10,0,30,0" Grid.Row="0" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="SignOutClicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <!--<Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                </Button>-->
                 
             </Grid>
 
             <StackLayout x:Name="stackBody" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-				<Grid BackgroundColor="White" Padding="20,0,20,0" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+				<Grid BackgroundColor="White" Padding="20,20,20,0" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="1*"/>
 						<RowDefinition Height="1*"/>

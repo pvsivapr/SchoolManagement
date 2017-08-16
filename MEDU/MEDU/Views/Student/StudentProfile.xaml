@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
-	xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="MEDU.StudentProfile">
-	
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MEDU.StudentProfile">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="styleLblStaticData" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="VerticalTextAlignment" Value="Start" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+            <Style x:Key="styleLblDynamicData" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="VerticalTextAlignment" Value="Start" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+            <Style x:Key="styleStackProfile" TargetType="Label">
+                <!--<Setter Property="Orientation" Value="Horizontal" />-->
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0,20,0,0" />
@@ -38,26 +60,52 @@
             <StackLayout x:Name="stackBody" Padding="20,0,0,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 
                     <StackLayout Spacing="30" Padding="0,10,0,0">
-						<Image x:Name="imgProfilePic" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-						</Image>
-					<ScrollView>
-						<StackLayout Spacing="20">
+                        <Image x:Name="imgProfilePic" WidthRequest="200" HeightRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                        </Image>
+                    <ScrollView>
+                        <StackLayout Spacing="20">
 
-							<Label x:Name="lblNameData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-							</Label>
-							<Label x:Name="lblRollNoData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-							</Label>
-							<Label x:Name="lblClassData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-							</Label>
-							<Label x:Name="lblMobileData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                            </Label>
-							<Label x:Name="lblEmailData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                            </Label>
-							<Label x:Name="lblAddressData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                            </Label>
-							
-						</StackLayout>
-						</ScrollView>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Name : " Grid.Row="0" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
+                                </Label>
+                                <Label x:Name="lblNameData" Grid.Row="0" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
+                                </Label>
+                                <Label Text="Roll No. : " Grid.Row="1" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
+                                </Label>
+                                <Label x:Name="lblRollNoData" Grid.Row="1" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
+                                </Label>
+                                <Label Text="Class : " Grid.Row="2" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
+                                </Label>
+                                <Label x:Name="lblClassData" Grid.Row="2" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
+                                </Label>
+                                <Label Text="Mobile : " Grid.Row="3" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
+                                </Label>
+                                <Label x:Name="lblMobileData" Grid.Row="3" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
+                                </Label>
+                                <Label Text="Email id : " Grid.Row="4" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
+                                </Label>
+                                <Label x:Name="lblEmailData" Grid.Row="4" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
+                                </Label>
+                                <Label Text="Address : " Grid.Row="5" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
+                                </Label>
+                                <Label x:Name="lblAddressData" Grid.Row="5" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
+                                </Label>
+                            </Grid>
+                            
+                        </StackLayout>
+                        </ScrollView>
                     </StackLayout>
                 
 

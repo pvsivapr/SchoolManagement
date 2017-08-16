@@ -22,12 +22,12 @@ namespace MEDU
             InitializeComponent();
             imgHeader.Source = ImageSource.FromFile(imgHead);
             imgProfilePic.Source = ImageSource.FromFile("UserProfile.png");
-            lblNameData.Text = "Name : \n\t Grandhi Veera Venkata Satya Naga Rama Praveen";
-            lblRollNoData.Text = "Roll No. : \n\t 09A91A0152";
-            lblClassData.Text = "Class : \n\t IV";
-            lblMobileData.Text = "Mobile : \n\t 9998887775";
-            lblEmailData.Text = "Email id : \n\t VenkataSivaprasadReddyPulagam@gmail.com";
-            lblAddressData.Text = "Address : \n\t B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah.";
+            lblNameData.Text = "Grandhi Veera Venkata Satya Naga Rama Praveen";
+            lblRollNoData.Text = "09A91A0152";
+            lblClassData.Text = "IV";
+            lblMobileData.Text = "9998887775";
+            lblEmailData.Text = "VenkataSivaprasadReddyPulagam@gmail.com";
+            lblAddressData.Text = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah.";
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
         }
         void MainNavigationClicked(object sender, EventArgs e)

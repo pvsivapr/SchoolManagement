@@ -14,17 +14,25 @@ namespace MEDU
         {
             HeightsRequest = (App.screenHeight * 8) / 100;
             InitializeComponent();
+            if (Device.OS == TargetPlatform.iOS)
+            {
+                gridBody.HeightRequest = (App.screenHeight * 21) / 100;
+            }
+            else
+            {
+                gridBody.HeightRequest = (App.screenHeight * 28) / 100;
+            }
             selectedType = "";
             entryUName.Focused += unameFocused;
             entryUName.Unfocused += unameUnFocused;
             //stackUName.HeightRequest = (App.screenHeight * 8) / 100;
             entryUPassword.Focused += uPasswordFocused;
             entryUPassword.Unfocused += uPasswordUnFocused;
-            stackUPassword.HeightRequest = (App.screenHeight * 8) / 100;
+            //stackUPassword.HeightRequest = (App.screenHeight * 8) / 100;
             pickerUType.Focused += TypeFocused;
             pickerUType.Unfocused += TypeUnFocused;
             pickerUType.SelectedIndexChanged += SelectedPickerData;
-            stackUType.HeightRequest = (App.screenHeight * 8) / 100;
+            //stackUType.HeightRequest = (App.screenHeight * 8) / 100;
             pickerSource = new Dictionary<string, string>();
             pickerSource.Add("Student", "Student");
             pickerSource.Add("Staff", "Staff");
@@ -119,7 +127,7 @@ namespace MEDU
         {
             try
             {
-                if (((Picker)sender).SelectedIndex <= 0)
+                if (((Picker)sender).SelectedIndex < 0)
                 {
                     lblUType.Opacity = 0;
                     pickerUType.Title = "User Type";

@@ -11,8 +11,9 @@ namespace MEDU
         public StudentHomeMenu()
         {
             InitializeComponent();
-            scrollPageHolder.BackgroundColor = AppGlobalVariables.orange;
-            stackPageHolder.BackgroundColor = AppGlobalVariables.orange;
+            //imgMenuProfile.BackgroundColor = AppGlobalVariables.orange;
+            //scrollPageHolder.BackgroundColor = AppGlobalVariables.orange;
+            //stackPageHolder.BackgroundColor = AppGlobalVariables.orange;
             var masterPageItems = new List<MasterPageItem>();
 
             masterPageItems.Add(new MasterPageItem

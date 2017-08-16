@@ -33,6 +33,17 @@ namespace MEDU
                 var msg = ex.Message;
             }
         }
+        void SignOutClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new UserLogin();
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+            }
+        }
         void ProfileNavigationClicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new StudentProfile("imgHomeIcon.png"));
