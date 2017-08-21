@@ -10,6 +10,7 @@ namespace MEDU
         public StudentCourseFeeDetail(CourseFee selectedFeeData)
         {
             InitializeComponent();
+            pageTitle.Text = selectedFeeData.FeeTitle;
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
             lblNameData.Text = selectedFeeData.FeeTitle;
             lblDateData.Text = selectedFeeData.FeeDates;

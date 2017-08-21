@@ -11,6 +11,7 @@ namespace MEDU
         {
             InitializeComponent();
 
+            pageTitle.Text = selectedEventData.EventNames;
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
             lblNameData.Text = selectedEventData.EventNames;
             lblDateData.Text = selectedEventData.EventDates;

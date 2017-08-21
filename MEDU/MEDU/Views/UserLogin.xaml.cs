@@ -8,7 +8,7 @@ namespace MEDU
     public partial class UserLogin : ContentPage
     {
         string selectedType;
-        Dictionary<string, string> pickerSource;
+        //Dictionary<string, string> pickerSource;
         public double HeightsRequest;
         public UserLogin()
         {
@@ -31,18 +31,18 @@ namespace MEDU
             entryUPassword.IsCustomPassword = true;
             entryUPassword.IsPassword = true;
             //stackUPassword.HeightRequest = (App.screenHeight * 8) / 100;
-            pickerUType.Focused += TypeFocused;
-            pickerUType.Unfocused += TypeUnFocused;
-            pickerUType.SelectedIndexChanged += SelectedPickerData;
-            //stackUType.HeightRequest = (App.screenHeight * 8) / 100;
-            pickerSource = new Dictionary<string, string>();
-            pickerSource.Add("Student", "Student");
-            pickerSource.Add("Staff", "Staff");
-            pickerSource.Add("Admin", "Admin");
-            foreach (var item in pickerSource)
-            {
-                pickerUType.Items.Add(item.Value);
-            }
+            //pickerUType.Focused += TypeFocused;
+            //pickerUType.Unfocused += TypeUnFocused;
+            //pickerUType.SelectedIndexChanged += SelectedPickerData;
+            ////stackUType.HeightRequest = (App.screenHeight * 8) / 100;
+            //pickerSource = new Dictionary<string, string>();
+            //pickerSource.Add("Student", "Student");
+            //pickerSource.Add("Staff", "Staff");
+            //pickerSource.Add("Admin", "Admin");
+            //foreach (var item in pickerSource)
+            //{
+            //    pickerUType.Items.Add(item.Value);
+            //}
         }
 
 
@@ -112,6 +112,7 @@ namespace MEDU
             }
         }
 
+        /*
         void TypeFocused(object sender, FocusEventArgs e)
         {
             try
@@ -166,6 +167,7 @@ namespace MEDU
                 var msg = ex.Message;
             }
         }
+        */
 
         void LoginClicked(object sender, EventArgs e)
         {
@@ -179,10 +181,10 @@ namespace MEDU
                 {
                     DisplayAlert("Alert", "User Password should not be empty", "Ok");
                 }
-                else if (string.IsNullOrEmpty(selectedType))
-                {
-                    DisplayAlert("Alert", "User Type should not be empty", "Ok");
-                }
+                //else if (string.IsNullOrEmpty(selectedType))
+                //{
+                //    DisplayAlert("Alert", "User Type should not be empty", "Ok");
+                //}
                 else
                 {
                     App.Current.MainPage = new StudentHomeMaster();

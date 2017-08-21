@@ -10,6 +10,7 @@ namespace MEDU
         public StudentExamsDetail(Exams selectedExamData)
         {
             InitializeComponent();
+            pageTitle.Text = selectedExamData.ExamNames;
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
             lblNameData.Text = selectedExamData.ExamNames;
             lblDateData.Text = selectedExamData.ExamDates;

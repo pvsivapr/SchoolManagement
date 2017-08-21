@@ -92,19 +92,19 @@
                     <BoxView Grid.Row="1" Grid.Column="0" Style="{StaticResource styleBoxULine}">
                     </BoxView>
                     
-                    <Label x:Name="lblUType" Grid.Row="2" Grid.Column="0" Text="User Type" Style="{StaticResource styleLblLogin}">
+                    <!--<Label x:Name="lblUType" Grid.Row="2" Grid.Column="0" Text="User Type" Style="{StaticResource styleLblLogin}">
                     </Label>
                     <local:CustomPicker Grid.Row="2" Grid.Column="0" x:Name="pickerUType" Title="User Type" HorizontalOptions="FillAndExpand" VerticalOptions="End">
-                        <!--<CustomPicker.ItemsSource>
+                        <CustomPicker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Student</x:String>
                                 <x:String>Teacher</x:String>
                                 <x:String>School Admin</x:String>
                             </x:Array>
-                        </CustomPicker.ItemsSource>-->
+                        </CustomPicker.ItemsSource>
                     </local:CustomPicker>
                     <BoxView Grid.Row="2" Grid.Column="0" Style="{StaticResource styleBoxULine}">
-                    </BoxView>
+                    </BoxView>-->
                     
                 </Grid>
 					

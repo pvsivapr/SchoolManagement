@@ -10,6 +10,7 @@ namespace MEDU
         public StudentHolidaysDetail(Holidays selectedHolidayData)
         {
             InitializeComponent();
+            pageTitle.Text = selectedHolidayData.HolidayNames;
             gridHeader.BackgroundColor = AppGlobalVariables.orange;
             lblNameData.Text = selectedHolidayData.HolidayNames;
             lblDateData.Text = selectedHolidayData.HolidayDates;

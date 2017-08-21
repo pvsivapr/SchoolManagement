@@ -28,7 +28,7 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MainNavigationClicked" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Label x:Name="pageTitle" Text="About Us" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label x:Name="pageTitle" Text="Help Desk" TextColor="White" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
                 <!--<Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
                 </Button>-->
