@@ -149,7 +149,7 @@
                 <Label Text="Powered by" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
 				<Label Text="MEDU" TextColor="Teal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                </Label>
+                </Label><!--Text="Macto Soft Pvt. Ltd."-->
 			</StackLayout>
             
         </AbsoluteLayout>
