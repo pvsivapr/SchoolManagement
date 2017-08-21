@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:MEDU; assembly=MEDU" 
 	x:Class="MEDU.Aboutus">
-	
+
+<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="styleLblLogin" TargetType="Label">
+				<Setter Property="HorizontalTextAlignment" Value="Start" />
+				<Setter Property="VerticalTextAlignment" Value="Center" />
+				<Setter Property="HorizontalOptions" Value="Start" />
+				<Setter Property="VerticalOptions" Value="Start" />
+				<Setter Property="FontSize" Value="15" />
+			</Style>
+			<Style x:Key="styleEntryLogin" TargetType="Entry">
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="End" />
+			</Style>
+
+				<Style x:Key="styleEdior" TargetType="Editor">
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="HeightRequest" Value="120" />
+				<Setter Property="WidthRequest" Value="60" />
+			</Style>
+
+			<Style x:Key="styleSmallEdior" TargetType="Editor">
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="HeightRequest" Value="30" />
+				<Setter Property="WidthRequest" Value="60" />
+			</Style>
+		
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0,20,0,0" />
@@ -35,31 +66,19 @@
                 
             </Grid>
 
-            <StackLayout x:Name="stackBody" Padding="20,0,0,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <ScrollView>
-                    <StackLayout Spacing="30">
-                        <Label x:Name="lblNameData" FontSize="17" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                        </Label>
-                        <Label x:Name="lblDateData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                        </Label>
-                        <Label x:Name="lblResultData" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                        </Label>
-                    </StackLayout>
-                </ScrollView>
-
-
-                <!--<StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End">
-                    <Label Text="Have an account already?" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    </Label>
-                    <Label Text="Register" TextColor="Teal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding NavigatecommandRegister}" />
-                        </Label.GestureRecognizers>
-                    </Label>
-                </StackLayout>-->
-                
-            </StackLayout>
-            
+            <StackLayout x:Name="stackBody" Padding="30" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                 <StackLayout Spacing="30">
+					<StackLayout>
+						<Label x:Name="lblSubject" Text="Subject" Style="{StaticResource styleLblLogin}"/>
+                    <Controls:EditorCtrl x:Name="ediotrSubject" HorizontalOptions="FillAndExpand" Style="{StaticResource styleSmallEdior}"/>
+					</StackLayout>
+					<StackLayout>
+					<Label x:Name="lblIssue" Opacity="1" Text="Issue" Style="{StaticResource styleLblLogin}" />
+					<Controls:EditorCtrl x:Name="ediotrIssue"  HorizontalOptions="FillAndExpand" Style="{StaticResource styleEdior}" />
+						</StackLayout>
+					<Button Text="Submit" HorizontalOptions="FillAndExpand" TextColor="Black" BackgroundColor="Silver" Clicked="btnSubmit_Click"/>
+					</StackLayout> 
+				</StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

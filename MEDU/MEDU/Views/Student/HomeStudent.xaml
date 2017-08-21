@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  xmlns:Controls="clr-namespace:MEDU; assembly=MEDU" 
 	x:Class="MEDU.HomeStudent">
     
 	<ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="styleImgHome" TargetType="Label">
-                <Setter Property="HeightRequest" Value="95" />
-				<Setter Property="WidthRequest" Value="95" />
+                <Setter Property="HeightRequest" Value="90" />
+				<Setter Property="WidthRequest" Value="90" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
@@ -77,66 +77,66 @@
                     <!--<Frame BackgroundColor="#F78F1E" HasShadow="false" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     </Frame>-->
 					<StackLayout Grid.Column="0" Grid.Row="0" Style="{StaticResource styleStackHome}">
-						<Image Source="UserProfile.png" Style="{StaticResource styleImgHome}">
-							<Image.GestureRecognizers>
+						<Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+							<Controls:ImageCircle.GestureRecognizers>
 								<TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ProfileNavigationClicked" />
-							</Image.GestureRecognizers>
-						</Image>
-						<Label Text="Child Profile" Style="{StaticResource styleLblHome}" >
+							</Controls:ImageCircle.GestureRecognizers>
+						</Controls:ImageCircle>
+						<Label Text="Profile" Style="{StaticResource styleLblHome}" >
 						</Label>
 					</StackLayout>
 					<StackLayout Grid.Column="1" Grid.Row="0" Style="{StaticResource styleStackHome}">
-                        <Image Source="Dairy.png" Style="{StaticResource styleImgHome}">
-							<Image.GestureRecognizers>
+                        <Controls:ImageCircle Source="Dairy.png" Style="{StaticResource styleImgHome}">
+							<Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="DairyNavigationClicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
                         <Label Text="Dairy" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 					<StackLayout Grid.Column="2" Grid.Row="0" Style="{StaticResource styleStackHome}">
-                        <Image Source="Exams.png" Style="{StaticResource styleImgHome}">
-							<Image.GestureRecognizers>
+                        <Controls:ImageCircle Source="Exams.png" Style="{StaticResource styleImgHome}">
+							<Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ExamsNavigationClicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
                         <Label Text="Exams" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 					<StackLayout Grid.Column="0" Grid.Row="1" Style="{StaticResource styleStackHome}">
-                        <Image Source="Events.png" Style="{StaticResource styleImgHome}">
-							<Image.GestureRecognizers>
+                        <Controls:ImageCircle Source="Events.png" Style="{StaticResource styleImgHome}">
+							<Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="EventsNavigationClicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
                         <Label Text="Events" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 					<StackLayout Grid.Column="1" Grid.Row="1" Style="{StaticResource styleStackHome}">
-                        <Image Source="Holidays.png" Style="{StaticResource styleImgHome}">
-							<Image.GestureRecognizers>
+                        <Controls:ImageCircle Source="Holidays.png" Style="{StaticResource styleImgHome}">
+							<Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="HolidaysNavigationClicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
                         <Label Text="Holidays" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 					<StackLayout Grid.Column="2" Grid.Row="1" Style="{StaticResource styleStackHome}">
-                        <Image Source="Fees.png" Style="{StaticResource styleImgHome}">
-                            <Image.GestureRecognizers>
+                        <Controls:ImageCircle Source="Fees.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FeesNavigationClicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
                         <Label Text="Fees" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 					<StackLayout Grid.Column="0" Grid.Row="2" Style="{StaticResource styleStackHome}">
-                        <Image Source="AboutUs.png" Style="{StaticResource styleImgHome}">
-                            <Image.GestureRecognizers>
+                        <Controls:ImageCircle Source="AboutUs.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="AboutUsNavigationClicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
-                        <Label Text="About us" Style="{StaticResource styleLblHome}">
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Help Desk" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
 
