@@ -148,7 +148,7 @@
 			<StackLayout x:Name="stackFooter" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1,1,1,0.1" AbsoluteLayout.LayoutFlags="All" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
                 <Label Text="Powered by" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
-				<Label Text="MEDU" TextColor="Teal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+				<Label x:Name="lblOwnerName" TextColor="Teal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label><!--Text="Macto Soft Pvt. Ltd."-->
 			</StackLayout>
             

@@ -14,6 +14,7 @@ namespace MEDU
         {
             HeightsRequest = (App.screenHeight * 8) / 100;
             InitializeComponent();
+            lblOwnerName.Text = Constants.AppOwner;
             if (Device.OS == TargetPlatform.iOS)
             {
                 gridBody.HeightRequest = (App.screenHeight * 21) / 100;
