@@ -69,6 +69,10 @@ namespace MEDU
         {
             Navigation.PushModalAsync(new StudentCourseFee("imgHomeIcon.png"));
         }
+        void SwitchUserClicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new StudentSelection());
+        }
         void AboutUsNavigationClicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new Aboutus("imgHomeIcon.png"));
