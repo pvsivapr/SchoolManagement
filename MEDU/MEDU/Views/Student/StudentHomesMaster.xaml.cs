@@ -7,7 +7,7 @@ namespace MEDU
 {
     public partial class StudentHomesMaster : MasterDetailPage
     {
-        public StudentHomeMaster()
+        public StudentHomesMaster()
         {
             InitializeComponent();
 
