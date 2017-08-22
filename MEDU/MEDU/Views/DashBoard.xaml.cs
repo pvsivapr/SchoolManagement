@@ -10,6 +10,8 @@ namespace MEDU
 		public DashBoard()
 		{
 			InitializeComponent();
+
+
 		}
 	}
 }
