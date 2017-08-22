@@ -10,12 +10,10 @@ namespace MEDU
         //public DotButtonsLayout dotLayout;
         //public CarouselView carousel;
         Label lblSkip;
-        //var ParentPage = StudentHomeMaster.shm;
         public HomeStudentCarousel()
         {
             InitializeComponent();
             Title = "";
-            //ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
             Children.Add(new StudentProfile("imgHomeIcon.png"));
             Children.Add(new HomeStudent());
             /*

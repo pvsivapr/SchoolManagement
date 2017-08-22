@@ -64,7 +64,7 @@
 
             <StackLayout x:Name="stackBody" Padding="20,30,20,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,0,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-				<Image Source="School.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+				<Image Source="SchoolLogo.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
 				</Image>
 				<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
 

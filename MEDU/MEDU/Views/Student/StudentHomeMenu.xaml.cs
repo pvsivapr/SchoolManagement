@@ -83,7 +83,7 @@ namespace MEDU
                 }
                 if (examData.Title == "HOME")
                 {
-                    parentDetailView.Detail = new HomeStudent() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new HomeStudentCarousel() { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "PROFILE")
                 {

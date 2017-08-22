@@ -131,7 +131,7 @@
                         </Label>
                     </StackLayout>
 					<StackLayout Grid.Column="0" Grid.Row="2" Style="{StaticResource styleStackHome}">
-                        <Controls:ImageCircle Source="AboutUs.png" Style="{StaticResource styleImgHome}">
+                        <Controls:ImageCircle Source="HelpDesk.png" Style="{StaticResource styleImgHome}">
                             <Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="AboutUsNavigationClicked" />
                             </Controls:ImageCircle.GestureRecognizers>
