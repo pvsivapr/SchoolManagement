@@ -80,14 +80,14 @@
                     
                     <Label x:Name="lblUName" Grid.Row="0" Grid.Column="0" Text="User Name" Style="{StaticResource styleLblLogin}">
                     </Label>
-                    <local:CustomEntry x:Name="entryUName" Grid.Row="0" Grid.Column="0" Placeholder="User Name" Style="{StaticResource styleEntryLogin}">
+                    <local:CustomEntry x:Name="entryUName" Keyboard="Numeric" Grid.Row="0" Grid.Column="0" Placeholder="User Name" Style="{StaticResource styleEntryLogin}" TextChanged="mobileNoChanged">
                     </local:CustomEntry>
                     <BoxView Grid.Row="0" Grid.Column="0" Style="{StaticResource styleBoxULine}">
                     </BoxView>
                     
                     <Label x:Name="lblUpasswprd" Grid.Row="1" Grid.Column="0" Text="Password" Style="{StaticResource styleLblLogin}">
                     </Label>
-                    <local:CustomEntry x:Name="entryUPassword" Grid.Row="1" Grid.Column="0" Placeholder="Password" IsCustomPassword="true" IsPassword="true" Style="{StaticResource styleEntryLogin}">
+                    <local:CustomEntry x:Name="entryUPassword" Grid.Row="1" Grid.Column="0" Placeholder="Password" IsCustomPassword="true" IsPassword="true" Style="{StaticResource styleEntryLogin}" TextChanged="passwordChanged">
                     </local:CustomEntry>
                     <BoxView Grid.Row="1" Grid.Column="0" Style="{StaticResource styleBoxULine}">
                     </BoxView>
