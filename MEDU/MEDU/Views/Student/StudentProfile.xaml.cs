@@ -9,7 +9,7 @@ namespace MEDU
     {
 
         bool isFromHome;
-        public StudentProfile(string imgHead)
+        public StudentProfile(string imgHead, StudentDetails selectedStdnt)
         {
             if (imgHead == "imgHomeIcon.png")
             {
@@ -27,12 +27,12 @@ namespace MEDU
             imgProfilePic.Source = ImageSource.FromFile("UserProfile.png");
             imgProfilePic.HeightRequest = 150;
             imgProfilePic.WidthRequest = 150;
-            lblNameData.Text = "Grandhi Veera Venkata Satya Naga Rama Praveen";
-            lblRollNoData.Text = "09A91A0152";
-            lblClassData.Text = "IV";
-            lblMobileData.Text = "9998887775";
-            lblEmailData.Text = "VenkataSivaprasadReddyPulagam@gmail.com";
-            lblAddressData.Text = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah.";
+            lblNameData.Text = selectedStdnt.stdName;//"Grandhi Veera Venkata Satya Naga Rama Praveen";
+            lblRollNoData.Text = selectedStdnt.stdRollNo;//"09A91A0152";
+            lblClassData.Text = selectedStdnt.stdClass;//"IV";
+            lblMobileData.Text = selectedStdnt.stdMobile;//"9998887775";
+            lblEmailData.Text = selectedStdnt.stdEmail;//"VenkataSivaprasadReddyPulagam@gmail.com";
+            lblAddressData.Text = selectedStdnt.stdAddress;//"B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah.";
             //gridHeader.BackgroundColor = AppGlobalVariables.orange;
         }
         //void MainNavigationClicked(object sender, EventArgs e)

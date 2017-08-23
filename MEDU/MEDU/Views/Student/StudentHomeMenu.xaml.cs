@@ -23,12 +23,12 @@ namespace MEDU
                 TargetType = typeof(HomeStudent)
             });
 
-            masterPageItems.Add(new MasterPageItem
-            {
-                Title = "PROFILE",
-                IconSource = "MyProfile.png",
-                TargetType = typeof(HomeStudent)
-            });
+            //masterPageItems.Add(new MasterPageItem
+            //{
+            //    Title = "PROFILE",
+            //    IconSource = "MyProfile.png",
+            //    TargetType = typeof(HomeStudent)
+            //});
             masterPageItems.Add(new MasterPageItem
             {
                 Title = "MY DAIRY",
@@ -61,7 +61,7 @@ namespace MEDU
             });
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "Switch User",
+                Title = "Switch Acounts",
                 IconSource = "Home.png",
                 TargetType = typeof(StudentSelection)
             });
@@ -89,12 +89,12 @@ namespace MEDU
                 }
                 if (examData.Title == "HOME")
                 {
-                    parentDetailView.Detail = new HomeStudentCarousel() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new HomeStudentCarousel(App.stdntDetails) { BackgroundColor = Color.White, };
                 }
-                else if (examData.Title == "PROFILE")
-                {
-                    parentDetailView.Detail = new StudentProfile("imgHamburger.png") { BackgroundColor = Color.White, };
-                }
+                //else if (examData.Title == "PROFILE")
+                //{
+                //    parentDetailView.Detail = new StudentProfile("imgHamburger.png") { BackgroundColor = Color.White, };
+                //}
                 else if (examData.Title == "MY DAIRY")
                 {
                     parentDetailView.Detail = new StudentDairy("imgHamburger.png") { BackgroundColor = Color.White, };
@@ -115,7 +115,7 @@ namespace MEDU
                 {
                     parentDetailView.Detail = new StudentCourseFee("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
-                else if (examData.Title == "Switch User")
+                else if (examData.Title == "Switch Acounts")
                 {
                     parentDetailView.Detail = new StudentSelection() { BackgroundColor = Color.White, };
                 }

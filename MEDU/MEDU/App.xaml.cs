@@ -1,15 +1,25 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace MEDU
 {
     public partial class App : Application
     {
         public static int screenHeight, screenWidth;
+        public static StudentDetails stdntDetails;
         public App()
         {
             InitializeComponent();
-
-            MainPage = new UserLogin();
+            try
+            {
+                MainPage = new UserLogin();
+                //MainPage = new StudentSelection();
+                //MainPage = new StudentHomeMaster();
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+            }
         }
 
         protected override void OnStart()

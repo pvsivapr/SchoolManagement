@@ -64,7 +64,11 @@
 
             <StackLayout x:Name="stackBody" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                <Grid BackgroundColor="White" Padding="20,20,20,0" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+				<ScrollView>
+					<StackLayout x:Name="stackStdsBody" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					</StackLayout>
+				</ScrollView>
+                <!--<Grid BackgroundColor="White" Padding="20,20,20,0" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
@@ -75,9 +79,9 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <!--<Frame BackgroundColor="#F78F1E" HasShadow="false" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    </Frame>-->
-                    <!--<StackLayout Grid.Column="0" Grid.Row="0" Style="{StaticResource styleStackHome}">
+                    <!<Frame BackgroundColor="#F78F1E" HasShadow="false" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    </Frame>
+                    <!<StackLayout Grid.Column="0" Grid.Row="0" Style="{StaticResource styleStackHome}">
                         <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
                             <Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ProfileNavigationClicked" />
@@ -85,7 +89,7 @@
                         </Controls:ImageCircle>
                         <Label Text="Profile" Style="{StaticResource styleLblHome}" >
                         </Label>
-                    </StackLayout>-->
+                    </StackLayout>
                     <StackLayout Grid.Column="0" Grid.Row="0" Style="{StaticResource styleStackHome}">
                         <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
                             <Controls:ImageCircle.GestureRecognizers>
@@ -95,7 +99,7 @@
                         <Label Text="Siva Prasad" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-                    <StackLayout Grid.Column="1" Grid.Row="0" Style="{StaticResource styleStackHome}">
+                    <StackLayout x:Name="StackChild2" IsVisible="false" Grid.Column="1" Grid.Row="0" Style="{StaticResource styleStackHome}">
                         <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
                             <Controls:ImageCircle.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
@@ -104,7 +108,70 @@
                         <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
                         </Label>
                     </StackLayout>
-                </Grid>
+					<StackLayout x:Name="StackChild3" Grid.Column="2" Grid.Row="0" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+					<StackLayout x:Name="StackChild4" Grid.Column="0" Grid.Row="1" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+					<StackLayout x:Name="StackChild5" Grid.Column="1" Grid.Row="1" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+					<StackLayout x:Name="StackChild6" Grid.Column="2" Grid.Row="1" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+					<StackLayout x:Name="StackChild7" Grid.Column="0" Grid.Row="2" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+					<StackLayout x:Name="StackChild8" Grid.Column="1" Grid.Row="2" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+					<StackLayout x:Name="StackChild9" Grid.Column="2" Grid.Row="2" Style="{StaticResource styleStackHome}">
+                        <Controls:ImageCircle Source="UserProfile.png" Style="{StaticResource styleImgHome}">
+                            <Controls:ImageCircle.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StudentClicked" />
+                            </Controls:ImageCircle.GestureRecognizers>
+                        </Controls:ImageCircle>
+                        <Label Text="Bala Raju" Style="{StaticResource styleLblHome}">
+                        </Label>
+                    </StackLayout>
+                </Grid>-->
 
                 <!--<StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End">
                     <Label Text="Have an account already?" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

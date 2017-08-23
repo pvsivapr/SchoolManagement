@@ -18,7 +18,7 @@ namespace MEDU
             Application.Current.Properties["ParentPage"] = this;
 
             Master = new StudentHomeMenu();
-            Detail = new HomeStudentCarousel() { BackgroundColor = Color.White };
+            Detail = new HomeStudentCarousel(App.stdntDetails) { BackgroundColor = Color.White };
         }
     }
 }

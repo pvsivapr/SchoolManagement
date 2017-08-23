@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Text.RegularExpressions;
 
 namespace MEDU
 {
@@ -178,9 +179,22 @@ namespace MEDU
                 {
                     DisplayAlert("Alert", "User Name should not be empty", "Ok");
                 }
+                else if (!Regex.IsMatch(entryUName.Text, @"^([1-9])([0-9]*)$"))
+                {
+                    DisplayAlert("Alert", "User Name should Mobile Number", "Ok");
+                }
+                else if (entryUName.Text.Length != 10)
+                {
+                    DisplayAlert("Alert", "This is not a valid User Id", "Ok");
+                }
                 else if (string.IsNullOrEmpty(entryUPassword.Text))
                 {
                     DisplayAlert("Alert", "User Password should not be empty", "Ok");
+                }
+                else if (entryUPassword.Text.Length != 4)
+                {
+
+                    DisplayAlert("Alert", "User Password is not Valid", "Ok");
                 }
                 //else if (string.IsNullOrEmpty(selectedType))
                 //{
@@ -188,7 +202,8 @@ namespace MEDU
                 //}
                 else
                 {
-                    App.Current.MainPage = new StudentHomeMaster();
+                    Navigation.PushModalAsync(new StudentSelection());
+                    //App.Current.MainPage = new StudentHomeMaster();
                 }
             }
             catch (Exception ex)
@@ -225,5 +240,10 @@ namespace MEDU
             //    var msg = ex.Message;
             //}
         }
+
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    return base.OnBackButtonPressed();
+        //}
     }
 }

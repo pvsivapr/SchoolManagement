@@ -45,10 +45,10 @@ namespace MEDU
                 var msg = ex.Message;
             }
         }
-        void ProfileNavigationClicked(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new StudentProfile("imgHomeIcon.png"));
-        }
+        //void ProfileNavigationClicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PushModalAsync(new StudentProfile("imgHomeIcon.png"));
+        //}
         void DairyNavigationClicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new StudentDairy("imgHomeIcon.png"));

@@ -162,9 +162,9 @@
                     </Label>
                 </StackLayout>-->
                 <StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
-                    <Image Source="F.png" BackgroundColor="Gray" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
-                    </Image>
                     <Image Source="UF.png" BackgroundColor="Gray" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                    </Image>
+                    <Image Source="F.png" BackgroundColor="Gray" HeightRequest="30" WidthRequest="30" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
                     </Image>
                 </StackLayout>
             </StackLayout>

@@ -10,11 +10,11 @@ namespace MEDU
         //public DotButtonsLayout dotLayout;
         //public CarouselView carousel;
         Label lblSkip;
-        public HomeStudentCarousel()
+        public HomeStudentCarousel(StudentDetails selectedStdnt)
         {
             InitializeComponent();
             Title = "";
-            Children.Add(new StudentProfile("imgHomeIcon.png"));
+            Children.Add(new StudentProfile("imgHomeIcon.png", selectedStdnt));
             Children.Add(new HomeStudent());
             /*
             ObservableCollection<Details> collection = new ObservableCollection<Details>
