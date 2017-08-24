@@ -13,6 +13,7 @@ namespace MEDU
         //Dictionary<string, string> pickerSource;
         public double HeightsRequest;
         public static ObservableCollection<StudentDetails> studentsData;
+
         public UserLogin()
         {
             HeightsRequest = (App.screenHeight * 8) / 100;
@@ -106,7 +107,7 @@ namespace MEDU
         {
             try
             {
-                if (string.IsNullOrEmpty(entryUName.Text))
+                if (string.IsNullOrEmpty(entryUPassword.Text))
                 {
                     lblUpasswprd.Opacity = 0;
                     entryUPassword.Placeholder = "Password";
@@ -208,7 +209,7 @@ namespace MEDU
                     studentsData = new ObservableCollection<StudentDetails>()
                     {
                         new StudentDetails() { stdName = "SivaPrasad", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                        //new StudentDetails() { stdName = "BalaRaju", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+                        new StudentDetails() { stdName = "BalaRaju", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
                         //new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Praveen", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
                         //new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
                         //new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Chandra", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
@@ -232,6 +233,7 @@ namespace MEDU
                         App.stdntDetails = studentsData[0];
                         App.Current.MainPage = new StudentHomeMaster();
                     }
+                    Constants.userPassCode = entryUPassword.Text;
                 }
             }
             catch (Exception ex)

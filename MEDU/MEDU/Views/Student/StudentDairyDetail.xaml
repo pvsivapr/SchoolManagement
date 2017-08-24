@@ -2,7 +2,32 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:Controls="clr-namespace:MEDU; assembly=MEDU" 
 	x:Class="MEDU.StudentDairyDetail">
+
+	<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="styleLblLogin" TargetType="Label">
+                <Setter Property="Opacity" Value="0" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="FontSize" Value="10" />
+            </Style>
+            <Style x:Key="styleEntryLogin" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="End" />
+            </Style>
+            <Style x:Key="styleBoxULine" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="End" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 	
    <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -41,7 +66,48 @@
 					</Label>
 				</ScrollView>
 
-
+                <StackLayout x:Name="stackFooter" Padding="0,0,0,20" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+					<Grid Padding="5,0,5,0" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="2*" />
+							<RowDefinition Height="1*" />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="2*"/>
+							<ColumnDefinition Width="2*"/>
+						</Grid.ColumnDefinitions>
+						<Label Text="Here by I confirm that my child have done the work provided for this day as per the diary " TextColor="Black" FontSize="19" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+						</Label>
+                        <Label x:Name="lblUpasswprd" Grid.Row="1" Grid.Column="0" Text="Password" Style="{StaticResource styleLblLogin}">
+						</Label>
+						<Controls:CustomEntry x:Name="entryUPassword" Grid.Row="1" Grid.Column="0" Placeholder="Password" IsCustomPassword="true" IsPassword="true" Style="{StaticResource styleEntryLogin}" TextChanged="passwordChanged">
+						</Controls:CustomEntry>
+						<BoxView Grid.Row="1" Grid.Column="0" Style="{StaticResource styleBoxULine}">
+						</BoxView>
+						<Button Text="Submit" Grid.Row="1" Grid.Column="1" Clicked="SubmitClicked">
+						</Button>
+                        <!--<Switch Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Toggled="DairySwitchToggled">
+						</Switch>-->
+					</Grid>
+					<!--<TableView Intent="Settings">
+						<TableRoot>
+							<TableSection Title="Getting Started">
+								<ViewCell>
+									<StackLayout Orientation="Horizontal">
+										<Image Source="bulb.png" />
+										<Label Text="left" TextColor="#f35e20" />
+										<Label Text="right"
+											HorizontalOptions="EndAndExpand" TextColor="#503026" />
+									</StackLayout>
+								</ViewCell>
+							</TableSection>
+							<TableSection Title="">
+								<SwitchCell Text="New Voice Mail" On="false" />
+								<SwitchCell Text="New Mail" On="true" />
+							</TableSection>
+						</TableRoot>
+					</TableView>-->
+				</StackLayout>
                 <!--<StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End">
                     <Label Text="Have an account already?" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     </Label>

@@ -24,6 +24,12 @@
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
+			<Style x:Key="styleBoxBackground" TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="White" />
+				<Setter Property="Color" Value="Transparent" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
             <Style x:Key="styleStackProfile" TargetType="Label">
                 <!--<Setter Property="Orientation" Value="Horizontal" />-->
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
@@ -83,8 +89,11 @@
                                     <ColumnDefinition Width="1*"/>
                                     <ColumnDefinition Width="3*"/>
                                 </Grid.ColumnDefinitions>
+								<Button Text="hello" TextColor="Transparent" BackgroundColor="Teal" BorderColor="Maroon" BorderWidth="5" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                </Button>
                                 <Label Text=" Name : " Grid.Row="0" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
                                 </Label>
+								
                                 <Label x:Name="lblNameData" Grid.Row="0" Grid.Column="1" Style="{StaticResource styleLblDynamicData}">
                                 </Label>
                                 <Label Text=" Roll No. : " Grid.Row="1" Grid.Column="0" Style="{StaticResource styleLblStaticData}" >
