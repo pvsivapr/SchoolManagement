@@ -71,7 +71,7 @@ namespace MEDU
         }
         void SwitchUserClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentSelection());
+            Navigation.PushModalAsync(new StudentSelection(UserLogin.studentsData));
         }
         void AboutUsNavigationClicked(object sender, EventArgs e)
         {

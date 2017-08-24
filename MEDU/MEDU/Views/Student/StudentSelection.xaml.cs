@@ -10,29 +10,30 @@ namespace MEDU
     public partial class StudentSelection : ContentPage
     {
         int dataCount = 0;
-        ObservableCollection<StudentDetails> studentsData;
+        //ObservableCollection<StudentDetails> studentsData;
         ObservableCollection<StudentView> studentsViewData;
-        public StudentSelection()
+        public StudentSelection(ObservableCollection<StudentDetails> studentsData)
         {
             InitializeComponent();
+            gridHeader.BackgroundColor = AppGlobalVariables.orange;
             int loop = 1;
             studentsViewData = new ObservableCollection<StudentView>();
-            studentsData = new ObservableCollection<StudentDetails>()
-            {
-                new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Praveen", stdImage="UserProfile.png", stdClass="IV", stdRollNo="09A91A0152", stdMobile="9988776655", stdEmail="VenkataSivaprasadReddyPulagam@gmail.com", stdAddress="B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Chandra", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "SivaPrasad", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "BalaRaju", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Gopi Nadh Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Dheeraj Chandra Teja", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Chandra", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "SivaPrasad", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "BalaRaju", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Gopi Nadh Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
-                new StudentDetails() { stdName = "Dheeraj Chandra Teja", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."}
-            };
+            //studentsData = new ObservableCollection<StudentDetails>()
+            //{
+            //    new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Praveen", stdImage="UserProfile.png", stdClass="IV", stdRollNo="09A91A0152", stdMobile="9988776655", stdEmail="VenkataSivaprasadReddyPulagam@gmail.com", stdAddress="B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Chandra", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "SivaPrasad", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "BalaRaju", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Gopi Nadh Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Dheeraj Chandra Teja", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Grandhi Veera Venkata Satya Naga Rama Chandra", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "SivaPrasad", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "BalaRaju", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Gopi Nadh Reddy", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."},
+            //    new StudentDetails() { stdName = "Dheeraj Chandra Teja", stdImage = "UserProfile.png", stdClass = "IV", stdRollNo = "09A91A0152", stdMobile = "9988776655", stdEmail = "VenkataSivaprasadReddyPulagam@gmail.com", stdAddress = "B-6, M.J.Manzil, Ashapura Colony, Rajampeta, Tirupahi, Cuddapah."}
+            //};
             StackLayout StackView = new StackLayout();
             foreach (var item in studentsData)
             {

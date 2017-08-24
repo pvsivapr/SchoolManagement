@@ -117,7 +117,7 @@ namespace MEDU
                 }
                 else if (examData.Title == "Switch Acounts")
                 {
-                    parentDetailView.Detail = new StudentSelection() { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentSelection(UserLogin.studentsData) { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "ABOUT US")
                 {
