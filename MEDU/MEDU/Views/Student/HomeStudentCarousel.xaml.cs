@@ -14,6 +14,8 @@ namespace MEDU
         {
             InitializeComponent();
             Title = "";
+            //BackgroundImage ="BG.png";
+
             Children.Add(new StudentProfile("imgHomeIcon.png", selectedStdnt));
             Children.Add(new HomeStudent());
             /*

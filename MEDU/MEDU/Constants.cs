@@ -26,6 +26,7 @@ namespace MEDU
 
         public const string SchoolName = "Oxford Public School";
         public const string AppOwner = "MEDU";//Macto Soft Pvt. Ltd.
+        public static string userPassCode = "";
 
         //SportzBee PrivacyPolicy URL.
         public const string PrivacyPolicyURL = "";
