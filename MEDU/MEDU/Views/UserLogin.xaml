@@ -4,6 +4,7 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:local="clr-namespace:MEDU;assembly=MEDU"
+	BackgroundImage = "BG.png"
 	x:Class="MEDU.UserLogin">
 
 	<ContentPage.Resources>
@@ -38,7 +39,7 @@
     </ContentPage.Padding>
 	
     <ContentPage.Content>
-        <AbsoluteLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <AbsoluteLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
             <!--<Grid x:Name="gridHeader" BackgroundColor="Maroon" Padding="10,0,0,0" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
@@ -62,7 +63,7 @@
                 
             </Grid>-->
 
-            <StackLayout x:Name="stackBody" Padding="20,30,20,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,0,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="stackBody" Padding="20,30,20,0" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,0,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
 				<Image Source="SchoolLogo.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
 				</Image>
@@ -139,13 +140,13 @@
                         <BoxView Style="{StaticResource styleBoxULine}">
                         </BoxView>
                     </StackLayout>-->
-					<Button Text="Login" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Clicked="LoginClicked">
+					<Button x:Name="btnLogin" BackgroundColor="White" Text="Login" BorderRadius="6" HorizontalOptions="FillAndExpand" Clicked="LoginClicked">
 					</Button>
 				</StackLayout>
                 
             </StackLayout>
 
-			<StackLayout x:Name="stackFooter" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1,1,1,0.1" AbsoluteLayout.LayoutFlags="All" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+			<StackLayout x:Name="stackFooter" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1,1,1,0.1" AbsoluteLayout.LayoutFlags="All" Padding="20,0,20,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
                 <Label Text="Powered by" TextColor="Maroon" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 </Label>
 				<Label x:Name="lblOwnerName" TextColor="Teal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

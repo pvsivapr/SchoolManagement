@@ -27,6 +27,7 @@ namespace MEDU
             {
                 gridBody.HeightRequest = (App.screenHeight * 28) / 100;
             }
+            btnLogin.WidthRequest = (App.screenWidth * 30) / 100;
             selectedType = "";
             entryUName.Focused += unameFocused;
             entryUName.Unfocused += unameUnFocused;

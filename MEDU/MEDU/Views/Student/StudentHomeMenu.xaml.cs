@@ -61,7 +61,7 @@ namespace MEDU
             });
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "Switch Acounts",
+                Title = "SWITCH ACCOUNTS",
                 IconSource = "Home.png",
                 TargetType = typeof(StudentSelection)
             });
@@ -115,7 +115,7 @@ namespace MEDU
                 {
                     parentDetailView.Detail = new StudentCourseFee("imgHamburger.png") { BackgroundColor = Color.White, };
                 }
-                else if (examData.Title == "Switch Acounts")
+                else if (examData.Title == "SWITCH ACCOUNTS")
                 {
                     parentDetailView.Detail = new StudentSelection(UserLogin.studentsData) { BackgroundColor = Color.White, };
                 }

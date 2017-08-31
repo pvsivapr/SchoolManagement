@@ -5,6 +5,7 @@
     Icon="imgHamburger.png"
 	BackgroundColor="Silver"
     Title="Hi"
+	BackgroundImage = "BG.png"
     x:Class="MEDU.StudentHomeMenu">
 
     <ContentPage.Content>
@@ -13,7 +14,7 @@
                 <!--<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                 <Image x:Name="imgMenuProfile" Source="Avatar.png" HeightRequest="100" WidthRequest="100" Margin="0,0,0,10" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>-->
-                <ListView x:Name="listView" VerticalOptions="FillAndExpand" HasUnevenRows="true" BackgroundColor="Silver" SeparatorVisibility="None">
+                <ListView x:Name="listView" VerticalOptions="FillAndExpand" HasUnevenRows="true" BackgroundColor="Transparent" SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

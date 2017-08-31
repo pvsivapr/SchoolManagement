@@ -3,6 +3,7 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
 	xmlns:Controls="clr-namespace:MEDU; assembly=MEDU" 
+	BackgroundImage = "BG.png"
 	x:Class="MEDU.HomeStudent">
     
 	<ContentPage.Resources>
@@ -33,9 +34,9 @@
     </ContentPage.Padding>
 	
     <ContentPage.Content>
-        <AbsoluteLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <AbsoluteLayout BackgroundColor="#40000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-            <Grid x:Name="gridHeader" BackgroundColor="Maroon" Padding="10,0,0,0" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid x:Name="gridHeader" BackgroundColor="Transparent" Padding="10,0,0,0" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
@@ -62,9 +63,9 @@
                 
             </Grid>
 
-            <StackLayout x:Name="stackBody" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="stackBody" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-				<Grid BackgroundColor="White" Padding="20,20,20,0" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+				<Grid BackgroundColor="Transparent" Padding="20,20,20,0" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="1*"/>
 						<RowDefinition Height="1*"/>
@@ -161,10 +162,10 @@
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>-->
-                <StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
-                    <Image Source="UF.png" BackgroundColor="Transparent" HeightRequest="10" WidthRequest="10" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <StackLayout x:Name="stackFooter" Orientation="Horizontal" Padding="20,0,20,10" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                    <Image Source="UF.png" BackgroundColor="Transparent" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
                     </Image>
-                    <Image Source="F.png" BackgroundColor="Transparent" HeightRequest="10" WidthRequest="10" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                    <Image Source="F.png" BackgroundColor="Transparent" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
                     </Image>
                 </StackLayout>
             </StackLayout>
