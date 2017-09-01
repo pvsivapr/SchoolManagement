@@ -24,7 +24,7 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="imgHeader" Source="Back.png" Margin="10,0,30,0" Grid.Row="0" Grid.Column="0" BackgroundColor="#C3C3C3" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" >
+                <Image x:Name="imgHeader" Source="Back.png" Margin="10,0,30,0" Grid.Row="0" Grid.Column="0" BackgroundColor="#00C3C3C3" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="BackImageTapped" />
                     </Image.GestureRecognizers>
@@ -49,16 +49,16 @@
 
             <StackLayout x:Name="stackBody" BackgroundColor="Transparent" Padding="20,0,20,0" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
 					<Label x:Name="pageTitle" Text="OTP Verification" TextColor="Black" FontFamily="Times New Roman" FontSize="25" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
                     </Label>
 					
-					<Grid x:Name="gridBody" Padding="10,0,0,0" RowSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+					<Grid x:Name="gridBody" Padding="10,0,0,0" RowSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="1*" />
-							<RowDefinition Height="0.7*" />
-							<RowDefinition Height="0.5*" />
+							<RowDefinition Height="0.9*" />
+							<RowDefinition Height="0.65*" />
 						</Grid.RowDefinitions>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="1*"/>

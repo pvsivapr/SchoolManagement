@@ -21,9 +21,11 @@ namespace MEDU
             }
             else
             {
-                gridBody.HeightRequest = (App.screenHeight * 28) / 100;
+                gridBody.HeightRequest = (App.screenHeight * 25) / 100;
             }
             btnVerify.WidthRequest = (App.screenWidth * 30) / 100;
+            entryOTP.Focused += OTPFocused;
+            entryOTP.Unfocused += OTPUnFocused;
         }
 
         public void BackImageTapped(object sender, EventArgs args)
@@ -49,7 +51,7 @@ namespace MEDU
                 App.Current.MainPage = new StudentHomeMaster();
             }
         }
-        void unameFocused(object sender, FocusEventArgs e)
+        void OTPFocused(object sender, FocusEventArgs e)
         {
             try
             {
@@ -62,14 +64,14 @@ namespace MEDU
             }
         }
 
-        void unameUnFocused(object sender, FocusEventArgs e)
+        void OTPUnFocused(object sender, FocusEventArgs e)
         {
             try
             {
                 if (string.IsNullOrEmpty(entryOTP.Text))
                 {
                     lblOTP.Opacity = 0;
-                    entryOTP.Placeholder = "User Name";
+                    entryOTP.Placeholder = "OTP Number";
                 }
                 else
                 {
@@ -86,9 +88,9 @@ namespace MEDU
         {
             var mobileObject = (Entry)sender;
             var textValue = mobileObject.Text;
-            if (textValue.Length > 10)
+            if (textValue.Length > 4)
             {
-                entryOTP.Text = textValue.Remove(textValue.Length - 4);
+                entryOTP.Text = textValue.Remove(textValue.Length - 1);
             }
         }
 
