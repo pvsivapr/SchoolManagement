@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BG.png" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MEDU.OTPVerification" xmlns:local="clr-namespace:MEDU;assembly=MEDU">
+<ScrollView>
+
+<Grid Padding="0,0,0,0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid >
+				<StackLayout Orientation="Horizontal" Padding="10,30,0,0">
+					<Image Source="Back.png" HorizontalOptions="Start">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="BackImageTapped" NumberOfTapsRequired="1" />
+						</Image.GestureRecognizers>
+					</Image>
+					<BoxView HorizontalOptions="FillAndExpand" >
+					</BoxView>
+				</StackLayout>
+		</Grid>
+		<Grid Padding="50,0,50,10" Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0" Padding="30,15,30,0">
+				<Image Source="Logo.png" />
+			</Grid>
+			<Grid Grid.Row="1" Padding="0,10,0,0">
+				<Label Text="OTP VERIFICATION" HorizontalOptions="CenterAndExpand" FontSize="20" FontFamily="Arial Special" TextColor="White" />
+			</Grid>
+			<Grid Grid.Row="2" Padding="0,10,0,0">
+				<Label HeightRequest="2" TextColor="Olive" Opacity="0.7" BackgroundColor="White" WidthRequest="140" HorizontalOptions="Center" />
+			</Grid>
+			<Grid Grid.Row="3" Padding="3,20,0,0">
+				<local:MyFrame BackgroundColor="Transparent" OutlineColor="White" HasShadow="false" Padding="20,5,5,5">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<Image Source="Mobilenumber.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="Start" />
+						<Entry Placeholder="OTP NUMBER" x:Name="OTPEntry" Grid.Column="1" PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" FontSize="15" HeightRequest="40" />
+					</Grid>
+				</local:MyFrame>
+			</Grid>
+			<Grid Grid.Row="4" Padding="0,30,0,0" ColumnSpacing="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Grid Grid.Row="0">
+					<Button Text="Verify" x:Name="BtnLogin" FontSize="18" HeightRequest="40" TextColor="White" BackgroundColor="#4169E1" FontFamily="Roboto-Light" BorderRadius="15" Clicked="BtnVerify_Click" />
+				</Grid>
+				<Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" Padding="0,10,0,0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Label Text="Resend Verification Code" HorizontalOptions="CenterAndExpand" VerticalOptions="End" FontSize="15" Opacity="0.7" TextColor="White">
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+						</Label.GestureRecognizers>
+					</Label>
+					<Label HeightRequest="1" Opacity="0.7" WidthRequest="160" BackgroundColor="White" VerticalOptions="End" />
+				</Grid>
+			</Grid>
+		</Grid>
+	</Grid>
+</ScrollView>
+
+	
+</ContentPage>
