@@ -1,78 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BG.png" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MEDU.OTPVerification" xmlns:local="clr-namespace:MEDU;assembly=MEDU">
-<ScrollView>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	BackgroundImage="BG.png" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="MEDU.OTPVerification" 
+	xmlns:local="clr-namespace:MEDU;assembly=MEDU">
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+            <On Platform="Android, WinPhone, Windows" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-<Grid Padding="0,0,0,0">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-		</Grid.RowDefinitions>
-		<Grid >
-				<StackLayout Orientation="Horizontal" Padding="10,30,0,0">
-					<Image Source="Back.png" HorizontalOptions="Start">
-						<Image.GestureRecognizers>
-							<TapGestureRecognizer Tapped="BackImageTapped" NumberOfTapsRequired="1" />
-						</Image.GestureRecognizers>
-					</Image>
-					<BoxView HorizontalOptions="FillAndExpand" >
-					</BoxView>
-				</StackLayout>
-		</Grid>
-		<Grid Padding="50,0,50,10" Grid.Row="1">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-			</Grid.RowDefinitions>
-			<Grid Grid.Row="0" Padding="30,15,30,0">
-				<Image Source="Logo.png" />
-			</Grid>
-			<Grid Grid.Row="1" Padding="0,10,0,0">
-				<Label Text="OTP VERIFICATION" HorizontalOptions="CenterAndExpand" FontSize="20" FontFamily="Arial Special" TextColor="White" />
-			</Grid>
-			<Grid Grid.Row="2" Padding="0,10,0,0">
-				<Label HeightRequest="2" TextColor="Olive" Opacity="0.7" BackgroundColor="White" WidthRequest="140" HorizontalOptions="Center" />
-			</Grid>
-			<Grid Grid.Row="3" Padding="3,20,0,0">
-				<local:MyFrame BackgroundColor="Transparent" OutlineColor="White" HasShadow="false" Padding="20,5,5,5">
-					<Grid>
+            <Grid x:Name="gridHeader" BackgroundColor="Transparent" Padding="10,0,0,0" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgHeader" Source="Back.png" Margin="10,0,30,0" Grid.Row="0" Grid.Column="0" BackgroundColor="#C3C3C3" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="BackImageTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+				
+                <!--<Label x:Name="pageTitle" TextColor="Black" FontFamily="Times New Roman" FontSize="19" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <!<Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="TimesNewRomanPSMT" />
+                            <On Platform="Android" Value="TimesNewRoman" />
+                            <On Platform="WinPhone, Windows" Value="0,0,0,0" />
+                            <!<OnPlatform.iOS>Lobster-Regular</OnPlatform.iOS>
+                            <OnPlatform.Android>Lobster-Regular.ttf#Lobster-Regular</OnPlatform.Android>
+                            <OnPlatform.WinPhone>Assets/Fonts/Lobster-Regular.ttf#Lobster</OnPlatform.WinPhone>
+                        </OnPlatform>
+                    </Label.FontFamily>>
+                </Label>-->
+                <!--<Button Text="Sign out" TextColor="White" FontSize="14" WidthRequest="60" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                </Button>-->
+                
+            </Grid>
+
+            <StackLayout x:Name="stackBody" BackgroundColor="Transparent" Padding="20,0,20,0" AbsoluteLayout.LayoutBounds="0,1,1,0.9" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+					<Label x:Name="pageTitle" Text="OTP Verification" TextColor="Black" FontFamily="Times New Roman" FontSize="25" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                    </Label>
+					
+					<Grid x:Name="gridBody" Padding="10,0,0,0" RowSpacing="10" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
 						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto" />
+							<RowDefinition Height="1*" />
+							<RowDefinition Height="0.7*" />
+							<RowDefinition Height="0.5*" />
 						</Grid.RowDefinitions>
 						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="Auto" />
-							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="4*"/>
+							<ColumnDefinition Width="1*"/>
 						</Grid.ColumnDefinitions>
-						<Image Source="Mobilenumber.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="Start" />
-						<Entry Placeholder="OTP NUMBER" x:Name="OTPEntry" Grid.Column="1" PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" FontSize="15" HeightRequest="40" />
-					</Grid>
-				</local:MyFrame>
-			</Grid>
-			<Grid Grid.Row="4" Padding="0,30,0,0" ColumnSpacing="10">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="Auto" />
-					<RowDefinition Height="Auto" />
-				</Grid.RowDefinitions>
-				<Grid Grid.Row="0">
-					<Button Text="Verify" x:Name="BtnLogin" FontSize="18" HeightRequest="40" TextColor="White" BackgroundColor="#4169E1" FontFamily="Roboto-Light" BorderRadius="15" Clicked="BtnVerify_Click" />
-				</Grid>
-				<Grid Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" Padding="0,10,0,0">
-					<Grid.RowDefinitions>
-						<RowDefinition Height="Auto" />
-					</Grid.RowDefinitions>
-					<Label Text="Resend Verification Code" HorizontalOptions="CenterAndExpand" VerticalOptions="End" FontSize="15" Opacity="0.7" TextColor="White">
-						<Label.GestureRecognizers>
-							<TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
-						</Label.GestureRecognizers>
-					</Label>
-					<Label HeightRequest="1" Opacity="0.7" WidthRequest="160" BackgroundColor="White" VerticalOptions="End" />
-				</Grid>
-			</Grid>
-		</Grid>
-	</Grid>
-</ScrollView>
+						
+						<Label x:Name="lblOTP" Text="OTP Number" Opacity="0" TextColor="Black" FontSize="10" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="Start" VerticalOptions="Start">
+						</Label>
+						<local:CustomEntry x:Name="entryOTP" Keyboard="Telephone" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Placeholder="OTP Number" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" TextChanged="OTPChanged">
+						</local:CustomEntry>
+						<BoxView HeightRequest="1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+						</BoxView>
 
-	
+						<Button x:Name="btnVerify" BackgroundColor="White" Text="Verify" BorderRadius="6" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand" Clicked="VerifyClicked">
+                        </Button>
+
+						<StackLayout Grid.Row="2" Grid.Column="1" Spacing="0">
+
+                        <Label x:Name="lblLogInfo" Text="Resend verification code" TextColor="Black" FontSize="Medium" BackgroundColor="Transparent" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" HorizontalOptions="Center" VerticalOptions="Start">
+							<!--<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="ReSendVerificationTapped" NumberOfTapsRequired="1" />
+							</Label.GestureRecognizers>-->
+						</Label>
+                        <BoxView HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                        </BoxView>
+						</StackLayout>
+						<BoxView Color="Transparent" BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+							<BoxView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ReSendVerificationTapped" NumberOfTapsRequired="1" />
+                            </BoxView.GestureRecognizers>
+						</BoxView>
+						
+					</Grid>
+					
+				</StackLayout>
+            </StackLayout>
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>
