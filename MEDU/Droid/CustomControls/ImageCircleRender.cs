@@ -13,62 +13,62 @@ using Android.Views;
 
 namespace MEDU.Droid
 {
-	public class ImageCircleRender : ImageRenderer
-	{
+    public class ImageCircleRender : ImageRenderer
+    {
 
-		protected override void OnElementChanged(ElementChangedEventArgs<Image> e)
-		{
-			base.OnElementChanged(e);
+        protected override void OnElementChanged(ElementChangedEventArgs<Image> e)
+        {
+            base.OnElementChanged(e);
 
-			if (e.OldElement == null)
-			{
+            if (e.OldElement == null)
+            {
 
-				//if ((int)Android.OS.Build.VERSION.SdkInt < 18)
-				//	SetLayerType (LayerType.Software, null);
-			}
-		}
+                //if ((int)Android.OS.Build.VERSION.SdkInt < 18)
+                //	SetLayerType (LayerType.Software, null);
+            }
+        }
 
-		protected override bool DrawChild(Canvas canvas, global::Android.Views.View child, long drawingTime)
-		{
-			try
-			{
-				var radius = Math.Min(Width, Height) / 2;
-				var strokeWidth = 10;
-				radius -= strokeWidth / 2;
+        protected override bool DrawChild(Canvas canvas, global::Android.Views.View child, long drawingTime)
+        {
+            try
+            {
+                var radius = Math.Min(Width, Height) / 2;
+                var strokeWidth = 10;
+                radius -= strokeWidth / 2;
 
 
-				Path path = new Path();
-				path.AddCircle(Width / 2, Height / 2, radius, Path.Direction.Ccw);
-				canvas.Save();
-				canvas.ClipPath(path);
+                Path path = new Path();
+                path.AddCircle(Width / 2, Height / 2, radius, Path.Direction.Ccw);
+                canvas.Save();
+                canvas.ClipPath(path);
 
-				var result = base.DrawChild(canvas, child, drawingTime);
+                var result = base.DrawChild(canvas, child, drawingTime);
 
-				canvas.Restore();
+                canvas.Restore();
 
-				path = new Path();
-				path.AddCircle(Width / 2, Height / 2, radius, Path.Direction.Ccw);
+                path = new Path();
+                path.AddCircle(Width / 2, Height / 2, radius, Path.Direction.Ccw);
 
-				var paint = new Paint();
-				paint.AntiAlias = true;
-				paint.StrokeWidth = 5;
-				paint.SetStyle(Paint.Style.Stroke);
-				paint.Color = global::Android.Graphics.Color.Blue;
+                var paint = new Paint();
+                paint.AntiAlias = true;
+                paint.StrokeWidth = 5;
+                paint.SetStyle(Paint.Style.Stroke);
+                paint.Color = global::Android.Graphics.Color.ParseColor("#C3C3C3");
 
-				canvas.DrawPath(path, paint);
+                canvas.DrawPath(path, paint);
 
-				paint.Dispose();
-				path.Dispose();
-				return result;
-			}
-			catch (Exception ex)
-			{
-				var msg = ex.Message;
-			}
+                paint.Dispose();
+                path.Dispose();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+            }
 
-			return base.DrawChild(canvas, child, drawingTime);
-		}
+            return base.DrawChild(canvas, child, drawingTime);
+        }
 
-	}
+    }
 }
 

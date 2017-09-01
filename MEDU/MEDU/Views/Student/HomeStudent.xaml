@@ -8,18 +8,18 @@
     
 	<ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="styleImgHome" TargetType="Label">
+            <Style x:Key="styleImgHome" TargetType="Image">
                 <Setter Property="HeightRequest" Value="90" />
 				<Setter Property="WidthRequest" Value="90" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
             <Style x:Key="styleLblHome" TargetType="Label">
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="Blue" />
 				<Setter Property="HorizontalOptions" Value="CenterAndExpand" />
 				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
-			<Style x:Key="styleStackHome" TargetType="Label">
+			<Style x:Key="styleStackHome" TargetType="StackLayout">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>

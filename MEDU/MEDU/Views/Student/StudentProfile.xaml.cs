@@ -25,12 +25,12 @@ namespace MEDU
             InitializeComponent();
             //BackgroundImage = "SplashScreen.png";
             pageTitle.Text = Constants.SchoolName;
-            pageTitle.TextColor = AppGlobalVariables.orange;
+            //pageTitle.TextColor = AppGlobalVariables.orange;
 
-            var gridBodyHeight = (App.screenHeight * 40) / 100;
-            var gridBodyWidth = ((App.screenWidth * 1) / 100) - 40;
-            gridDataHolder.HeightRequest = gridBodyHeight;
-            gridDataHolder.WidthRequest = gridBodyWidth;
+            //var gridBodyHeight = (App.screenHeight * 40) / 100;
+            //var gridBodyWidth = ((App.screenWidth * 1) / 100) - 40;
+            //gridDataHolder.HeightRequest = gridBodyHeight;
+            //gridDataHolder.WidthRequest = gridBodyWidth;
             //slider.Maximum = 100;//(App.screenWidth) - 40;//1000;//working
             ////slider.Maximum = (App.screenHeight * 40) / 100;//1000;//working
             //slider.Minimum = 0;

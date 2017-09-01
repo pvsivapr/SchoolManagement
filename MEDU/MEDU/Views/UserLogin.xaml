@@ -11,6 +11,7 @@
 		<ResourceDictionary>
 			<Style x:Key="styleLblLogin" TargetType="Label">
 				<Setter Property="Opacity" Value="0" />
+				<Setter Property="TextColor" Value="Black" />
 				<Setter Property="HorizontalTextAlignment" Value="Start" />
 				<Setter Property="VerticalTextAlignment" Value="Center" />
 				<Setter Property="HorizontalOptions" Value="Start" />
@@ -18,6 +19,7 @@
 				<Setter Property="FontSize" Value="10" />
 			</Style>
 			<Style x:Key="styleEntryLogin" TargetType="Entry">
+                <Setter Property="TextColor" Value="Black" />
 				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
 				<Setter Property="VerticalOptions" Value="End" />
 			</Style>
@@ -79,16 +81,16 @@
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
                     
-                    <Label x:Name="lblUName" Grid.Row="0" Grid.Column="0" Text="User Name" Style="{StaticResource styleLblLogin}">
+                    <Label x:Name="lblUName" Grid.Row="0" Grid.Column="0" Text="Mobile no" Style="{StaticResource styleLblLogin}">
                     </Label>
-                    <local:CustomEntry x:Name="entryUName" Keyboard="Numeric" Grid.Row="0" Grid.Column="0" Placeholder="User Name" Style="{StaticResource styleEntryLogin}" TextChanged="mobileNoChanged">
+                    <local:CustomEntry x:Name="entryUName" Keyboard="Telephone" Grid.Row="0" Grid.Column="0" Placeholder="Mobile no" Style="{StaticResource styleEntryLogin}" TextChanged="mobileNoChanged">
                     </local:CustomEntry>
                     <BoxView Grid.Row="0" Grid.Column="0" Style="{StaticResource styleBoxULine}">
                     </BoxView>
                     
                     <Label x:Name="lblUpasswprd" Grid.Row="1" Grid.Column="0" Text="Password" Style="{StaticResource styleLblLogin}">
                     </Label>
-                    <local:CustomEntry x:Name="entryUPassword" Grid.Row="1" Grid.Column="0" Placeholder="Password" IsCustomPassword="true" IsPassword="true" Style="{StaticResource styleEntryLogin}" TextChanged="passwordChanged">
+                    <local:CustomEntry x:Name="entryUPassword" Keyboard="Numeric" Grid.Row="1" Grid.Column="0" Placeholder="Password" IsCustomPassword="true" IsPassword="true" Style="{StaticResource styleEntryLogin}" TextChanged="passwordChanged">
                     </local:CustomEntry>
                     <BoxView Grid.Row="1" Grid.Column="0" Style="{StaticResource styleBoxULine}">
                     </BoxView>
@@ -140,8 +142,12 @@
                         <BoxView Style="{StaticResource styleBoxULine}">
                         </BoxView>
                     </StackLayout>-->
-					<Button x:Name="btnLogin" BackgroundColor="White" Text="Login" BorderRadius="6" HorizontalOptions="FillAndExpand" Clicked="LoginClicked">
-					</Button>
+					<StackLayout BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+						<Button x:Name="btnLogin" BackgroundColor="White" Text="Login" BorderRadius="6" HorizontalOptions="CenterAndExpand" Clicked="LoginClicked">
+						</Button>
+						<Label x:Name="lblLogInfo" Text="logged as 94*****236" TextColor="Black" FontSize="Small" BackgroundColor="Transparent" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+						</Label>
+					</StackLayout>
 				</StackLayout>
                 
             </StackLayout>
