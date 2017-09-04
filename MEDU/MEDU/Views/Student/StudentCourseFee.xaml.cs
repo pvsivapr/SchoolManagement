@@ -51,7 +51,9 @@ namespace MEDU
                 }
                 else
                 {
-                    var ParentPage = (MasterDetailPage)this.Parent;
+                    //var ParentPage = (MasterDetailPage)this.Parent;
+                    //ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
+                    var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
                     ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
                 }
             }

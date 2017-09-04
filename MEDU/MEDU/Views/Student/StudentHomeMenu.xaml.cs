@@ -97,23 +97,23 @@ namespace MEDU
                 //}
                 else if (examData.Title == "MY DAIRY")
                 {
-                    parentDetailView.Detail = new StudentDairy("imgHamburger.png") { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentDairy("imgHomeIcon.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY EXAMS")
                 {
-                    parentDetailView.Detail = new StudentExams("imgHamburger.png") { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentExams("imgHomeIcon.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY EVENTS")
                 {
-                    parentDetailView.Detail = new StudentEvents("imgHamburger.png") { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentEvents("imgHomeIcon.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "MY HOLIDAYS")
                 {
-                    parentDetailView.Detail = new StudentHolidays("imgHamburger.png") { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentHolidays("imgHomeIcon.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "FEES")
                 {
-                    parentDetailView.Detail = new StudentCourseFee("imgHamburger.png") { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new StudentCourseFee("imgHomeIcon.png") { BackgroundColor = Color.White, };
                 }
                 else if (examData.Title == "SWITCH ACCOUNTS")
                 {
@@ -121,7 +121,7 @@ namespace MEDU
                 }
                 else if (examData.Title == "ABOUT US")
                 {
-                    parentDetailView.Detail = new Aboutus("imgHamburger.png") { BackgroundColor = Color.White, };
+                    parentDetailView.Detail = new Aboutus("imgHomeIcon.png") { BackgroundColor = Color.White, };
                 }
                 else
                 {

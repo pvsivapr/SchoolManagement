@@ -41,7 +41,9 @@ namespace MEDU
         {
             if (isFromHome == true)
             {
-                Navigation.PopModalAsync();
+                //Navigation.PopModalAsync();
+                var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+                ParentPage.IsPresented = (ParentPage.IsPresented == false) ? true : false;
             }
             else
             {

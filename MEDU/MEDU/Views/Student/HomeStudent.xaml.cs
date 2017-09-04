@@ -51,31 +51,46 @@ namespace MEDU
         //}
         void DairyNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentDairy("imgHomeIcon.png"));
+
+            //Navigation.PushModalAsync(new StudentDairy("imgHomeIcon.png"));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new StudentDairy("imgHomeIcon.png") { BackgroundColor = Color.White, };
         }
         void ExamsNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentExams("imgHomeIcon.png"));
+            //Navigation.PushModalAsync(new StudentExams("imgHomeIcon.png"));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new StudentExams("imgHomeIcon.png") { BackgroundColor = Color.White, };
         }
         void EventsNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentEvents("imgHomeIcon.png"));
+            //Navigation.PushModalAsync(new StudentEvents("imgHomeIcon.png"));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new StudentEvents("imgHomeIcon.png") { BackgroundColor = Color.White, };
         }
         void HolidaysNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentHolidays("imgHomeIcon.png"));
+            //Navigation.PushModalAsync(new StudentHolidays("imgHomeIcon.png"));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new StudentHolidays("imgHomeIcon.png") { BackgroundColor = Color.White, };
         }
         void FeesNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentCourseFee("imgHomeIcon.png"));
+            //Navigation.PushModalAsync(new StudentCourseFee("imgHomeIcon.png"));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new StudentCourseFee("imgHomeIcon.png") { BackgroundColor = Color.White, };
         }
         void SwitchUserClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new StudentSelection(UserLogin.studentsData));
+            //Navigation.PushModalAsync(new StudentSelection(UserLogin.studentsData));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new StudentSelection(UserLogin.studentsData) { BackgroundColor = Color.White, };
         }
         void AboutUsNavigationClicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Aboutus("imgHomeIcon.png"));
+            //Navigation.PushModalAsync(new Aboutus("imgHomeIcon.png"));
+            var ParentPage = StudentHomeMaster.shm;//(MasterDetailPage)this.Parent;
+            ParentPage.Detail = new Aboutus("imgHomeIcon.png") { BackgroundColor = Color.White, };
         }
 
     }
