@@ -1,10 +1,34 @@
-﻿<Properties StartupConfiguration="{1F360E6D-1BC4-4260-9ABE-B0C84017E3E3}|Default">
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupConfiguration="{F5AE4B71-9660-40BA-A2AE-FB9A6415CCD0}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.ItemProperties.MEDU.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MEDU/Views/Student/HomeStudent.xaml">
+    <Files>
+      <File FileName="MEDU/Views/UserLogin.xaml" Line="1" Column="1" />
+      <File FileName="MEDU/AppGlobalVariables.cs" Line="16" Column="54" />
+      <File FileName="MEDU/CustomControls/ImageCircle.cs" Line="1" Column="1" />
+      <File FileName="Droid/CustomControls/ImageCircleRender.cs" Line="53" Column="40" />
+      <File FileName="iOS/CustomControls/ImageCircleRender.cs" Line="45" Column="14" />
+      <File FileName="MEDU/Views/Student/HomeStudent.xaml" Line="175" Column="15" />
+      <File FileName="MEDU/Views/Student/StudentProfile.xaml" Line="1" Column="1" />
+      <File FileName="MEDU/Views/Student/StudentProfile.xaml.cs" Line="20" Column="14" />
+      <File FileName="MEDU/Views/Student/OTPVerification.xaml" Line="1" Column="1" />
+      <File FileName="MEDU/Views/Student/OTPVerification.xaml.cs" Line="75" Column="18" />
+      <File FileName="MEDU/Views/Student/StudentCourseFee.xaml.cs" Line="57" Column="95" />
+      <File FileName="MEDU/Views/Student/StudentHomeMenu.xaml.cs" Line="97" Column="20" />
+      <File FileName="MEDU/Views/Student/HomeStudent.xaml.cs" Line="87" Column="76" />
+      <File FileName="MEDU/Views/Student/StudentEvents.xaml.cs" Line="39" Column="9" />
+      <File FileName="MEDU/Views/Student/StudentDairy.xaml.cs" Line="75" Column="10" />
+      <File FileName="MEDU/Views/Student/StudentExams.xaml.cs" Line="53" Column="14" />
+      <File FileName="MEDU/Views/Student/StudentHolidays.xaml.cs" Line="46" Column="91" />
+      <File FileName="MEDU/Views/Aboutus.xaml.cs" Line="43" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rabbit/Desktop/untitledfolder/PersonalProjFiles/SchoolMgmtProj/MEDU/MEDU/Views/UserLogin.xaml.cs" relfile="MEDU/Views/UserLogin.xaml.cs" line="261" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MEDU.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.20050A5E-5142-4E2D-9C23-032C07A46116" />
+  <MonoDevelop.Ide.ItemProperties.MEDU.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.181B3DA1-30B6-4A59-9D79-331C3C344171" />
 </Properties>

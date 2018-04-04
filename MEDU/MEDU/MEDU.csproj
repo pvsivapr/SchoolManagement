@@ -35,6 +35,55 @@
     <EmbeddedResource Include="Views\DashBoard.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\HomeStudent.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentDairy.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentDairyDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentExams.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentExamsDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentHolidays.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentHolidaysDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentCourseFee.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentCourseFeeDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentEvents.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentEventsDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aboutus.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentHomeMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\HomeStudentCarousel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\StudentSelection.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\OTPVerification.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -50,6 +99,61 @@
     <Compile Include="Views\DashBoard.xaml.cs">
       <DependentUpon>DashBoard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Student\HomeStudent.xaml.cs">
+      <DependentUpon>HomeStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentDairy.xaml.cs">
+      <DependentUpon>StudentDairy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentDairyDetail.xaml.cs">
+      <DependentUpon>StudentDairyDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentExams.xaml.cs">
+      <DependentUpon>StudentExams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentExamsDetail.xaml.cs">
+      <DependentUpon>StudentExamsDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentHolidays.xaml.cs">
+      <DependentUpon>StudentHolidays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentHolidaysDetail.xaml.cs">
+      <DependentUpon>StudentHolidaysDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentCourseFee.xaml.cs">
+      <DependentUpon>StudentCourseFee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentCourseFeeDetail.xaml.cs">
+      <DependentUpon>StudentCourseFeeDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentEvents.xaml.cs">
+      <DependentUpon>StudentEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentEventsDetail.xaml.cs">
+      <DependentUpon>StudentEventsDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentProfile.xaml.cs">
+      <DependentUpon>StudentProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aboutus.xaml.cs">
+      <DependentUpon>Aboutus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentHomeMenu.xaml.cs">
+      <DependentUpon>StudentHomeMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\StudentHomeMaster.cs" />
+    <Compile Include="CustomControls\CustomEntry.cs" />
+    <Compile Include="CustomControls\CustomPicker.cs" />
+    <Compile Include="Views\Student\HomeStudentCarousel.xaml.cs">
+      <DependentUpon>HomeStudentCarousel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\EditorCtrl.cs" />
+    <Compile Include="CustomControls\ImageCircle.cs" />
+    <Compile Include="Views\Student\StudentSelection.xaml.cs">
+      <DependentUpon>StudentSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\OTPVerification.xaml.cs" />
+    <Compile Include="CustomControls\MyFrame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -67,9 +171,18 @@
     <Reference Include="SQLite.Net">
       <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.CarouselView">
+      <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Views\Student\StudentHomesMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </None>
+    <None Include="Views\Student\StudentHomesMaster.xaml.cs">
+      <DependentUpon>StudentHomesMaster.xaml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -84,6 +197,7 @@
     <Folder Include="DatabaseLayer\SQLite.Connection\" />
     <Folder Include="DatabaseLayer\SQLite.Tables\" />
     <Folder Include="RESTServicesLayer\JSONModels\" />
+    <Folder Include="Views\Student\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

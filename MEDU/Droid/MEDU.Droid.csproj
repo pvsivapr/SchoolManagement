@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MEDU.Droid</RootNamespace>
     <AssemblyName>MEDU.Droid</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -25,7 +25,6 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi-v7a;armeabi;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -93,6 +93,9 @@
     <Reference Include="SQLite.Net.Platform.XamarinAndroid">
       <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.CarouselView">
+      <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\MonoAndroid10\Xamarin.Forms.CarouselView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MEDU\MEDU.csproj">
@@ -105,6 +108,11 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="CustomControls\CustomEntryRenderer.cs" />
+    <Compile Include="CustomControls\CustomPickerRender.cs" />
+    <Compile Include="CustomControls\EditorCtrlRenderer.cs" />
+    <Compile Include="CustomControls\ImageCircleRender.cs" />
+    <Compile Include="CustomControls\MyFrameRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,6 +128,30 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Avatar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Events.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Holidays.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\UserProfile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Back.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\imgHamburger.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SplashScreen2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\power.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SchoolLogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Dairy.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\HelpDesk.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Fees.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Exams.png" />
+    <AndroidResource Include="Resources\drawable\withBorderEditor.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\F.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\UF.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SwitchUser.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Home.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\MyProfile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SplashScreen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\BG.png" />
+    <AndroidResource Include="Resources\drawable\blue_rect.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\imgHomeIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomControls\" />

@@ -24,7 +24,7 @@
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
     <IOSDebuggerPort>15615</IOSDebuggerPort>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
@@ -106,6 +106,9 @@
     <Reference Include="SQLite.Net.Platform.XamarinIOS.Unified">
       <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\Xamarin.iOS10\SQLite.Net.Platform.XamarinIOS.Unified.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.CarouselView">
+      <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MEDU\MEDU.csproj">
@@ -134,6 +137,36 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="CustomControls\CustomEntryRenderer.cs" />
+    <Compile Include="CustomControls\CustomPickerRender.cs" />
+    <Compile Include="CustomControls\EditorCtrlRenderer.cs" />
+    <Compile Include="CustomControls\ImageCircleRender.cs" />
+    <Compile Include="CustomControls\MyFrameRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Avatar%402x.png" />
+    <BundleResource Include="Resources\Avatar%403x.png" />
+    <BundleResource Include="Resources\Events%402x.png" />
+    <BundleResource Include="Resources\Holidays%402x.png" />
+    <BundleResource Include="Resources\UserProfile%402x.png" />
+    <BundleResource Include="Resources\imgHamburger%402x.png" />
+    <BundleResource Include="Resources\imgHamburger%403x.png" />
+    <BundleResource Include="Resources\Back%402x.png" />
+    <BundleResource Include="Resources\Back%403x.png" />
+    <BundleResource Include="Resources\SchoolLogo%402x.png" />
+    <BundleResource Include="Resources\Dairy%402x.png" />
+    <BundleResource Include="Resources\HelpDesk%402x.png" />
+    <BundleResource Include="Resources\Fees%402x.png" />
+    <BundleResource Include="Resources\Exams%402x.png" />
+    <BundleResource Include="Resources\F%402x.png" />
+    <BundleResource Include="Resources\UF%402x.png" />
+    <BundleResource Include="Resources\Home%402x.png" />
+    <BundleResource Include="Resources\Home%403x.png" />
+    <BundleResource Include="Resources\MyProfile%402x.png" />
+    <BundleResource Include="Resources\MyProfile%403x.png" />
+    <BundleResource Include="Resources\SwitchUser%402x.png" />
+    <BundleResource Include="Resources\BG%402x.png" />
+    <BundleResource Include="Resources\imgHomeIcon%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

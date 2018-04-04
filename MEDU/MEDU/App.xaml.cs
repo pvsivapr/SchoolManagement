@@ -12,7 +12,9 @@ namespace MEDU
             InitializeComponent();
             try
             {
+                //MainPage = new StudentDairyDetail(null);
                 MainPage = new UserLogin();
+                //MainPage = new StudentProfile("imgHomeIcon.png", null);
                 //MainPage = new StudentSelection();
                 //MainPage = new StudentHomeMaster();
             }
